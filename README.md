@@ -13,3 +13,4 @@ CSS - Linguagem de estilização
 Java - Backend
 JavaScript - Validação de formulário login/cadastro
 PostgreSQL - Linguagem de Banco de Dados
+BootStrap - FrameWork para agilizar o desenvolvimento do front end.
