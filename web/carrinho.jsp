@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<%-- 
+    Document   : carrinho
+    Created on : 19 de out. de 2023, 12:59:37
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +18,7 @@
     <div class="container">
         <header class="header">
             <div class="logo">
-                <a href="index.html"><img src="logo.png" alt="LOGO"></a>
+                <a href="index.jsp"><img src="logo.png" alt="LOGO"></a>
 
             </div>
             <div class="header-buttons">
@@ -53,3 +60,4 @@
     </div>
 </body>
 </html>
+

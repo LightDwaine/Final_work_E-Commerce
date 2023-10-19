@@ -1,3 +1,10 @@
+<%-- 
+    Document   : login
+    Created on : 19 de out. de 2023, 12:57:51
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +18,7 @@
         <header class="header">
             <nav>
                 <div class="logo">
-                    <a class="home-button" href="index.html"><img src="logo.png" alt="LOGO"></a>
+                    <a class="home-button" href="index.jsp"><img src="logo.png" alt="LOGO"></a>
                 </div>
             </nav>
 
