@@ -36,6 +36,7 @@ public class UsuarioDAO {
             ps.close();
             c.close();
         } catch (ClassNotFoundException | SQLException ex) {
+            ex.printStackTrace();
             return false;
         }
         return sucesso;
@@ -67,6 +68,7 @@ public class UsuarioDAO {
             ps.close();
             c.close();
         } catch (ClassNotFoundException | SQLException ex) {
+            ex.printStackTrace();
             return false;
         }
         return sucesso;

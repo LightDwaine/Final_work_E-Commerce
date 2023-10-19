@@ -31,13 +31,13 @@
 
             <form action="" id="login-form">
                 <div class="form-group">
-                    <label id="email-label" for="email-form"><span class="required">*</span>e-mail</label>
-                    <input type="text" name="email-form" id="email-form" class="form-control" required />
+                    <label id="email-label" for="email-form"><span class="required">*</span>usuário</label>
+                    <input type="text" name="login" id="login" class="form-control" required />
                 </div>
 
                 <div class="form-group">
                     <label id="password-label" for="password-form"><span class="required">*</span>senha</label>
-                    <input type="password" name="password-form" id="paspassword-formsword" class="form-control" required />
+                    <input type="password" name="senha" id="senha" class="form-control" required />
                 </div>
 
                 <div class="form-group">
