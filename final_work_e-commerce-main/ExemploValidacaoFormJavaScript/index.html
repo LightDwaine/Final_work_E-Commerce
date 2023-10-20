@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript" src="form.js"></script>
+</head>
+<body>
+<form onsubmit="return validarCampos()">
+    Qual seu nome?<br/>
+    <input type="text" name="nome" id="nome" /><br/>
+    Qual sua cor favorita?
+    <div>
+    <input type="radio" name="cores" value="vermelho" />Vermelho<br/>
+    <input type="radio" name="cores" value="azul" />Azul<br/>
+    <input type="radio" name="cores" value="verde" />Verde<br/>
+    </div>
+    Qual sua profissão?<br/>
+    <select name="profissao" id="profissao">
+        <option value="">Selecione</option>
+        <option value="1">Analista de Sistemas</option>
+        <option value="2">Designer</option>
+        <option value="3">Programador</option>
+        <option value="4">Gerente de Projetos</option>
+    </select>
+    <div>Você aceita os termos? <input type="checkbox" name="termos" id="termos" />&nbsp;Sim
+    </div>
+    <input type="submit" value="Enviar" />
+</form>
+</body>
+</html>
