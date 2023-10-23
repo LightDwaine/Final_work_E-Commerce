@@ -1,8 +1,4 @@
-<%-- 
-    Document   : login
-    Created on : 19 de out. de 2023, 12:57:51
-    Author     : user
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,22 +10,16 @@
     <title>Login</title>
 </head>
 <body>
+    <%@include file="cabecalho_dados.jsp" %>
     <div class="container">
-        <header class="header">
-            <nav>
-                <div class="logo">
-                    <a class="home-button" href="index.jsp"><img src="logo.png" alt="LOGO"></a>
-                </div>
-            </nav>
-
-        </header>
+        
         <main>
             <section class="form-header">
-                <h1 id="title" class="text-center"><img class="perfil-icon" src="img/perfil-icon.png" alt="perfil-icon"> login do cliente</h1>
+    
                 <p id="description" class="description text-center">Acompanhe seus pedidos!<br/>Ele pode chegar antes que você perceba :)</p>
             </section>
 
-            <form action="" id="login-form">
+            <form action="Login" id="login-form" method="post">
                 <div class="form-group">
                     <label id="email-label" for="email-form"><span class="required">*</span>usuário</label>
                     <input type="text" name="login" id="login" class="form-control" required />
@@ -52,5 +42,6 @@
             </form>
         </main>
     </div>
+        <%@include file="rodape.jsp" %>
 </body>
 </html>

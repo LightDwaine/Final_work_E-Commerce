@@ -1,8 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 1 de set de 2023, 14:52:02
-    Author     : Leonardo Oliveira Moreira
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,25 +10,7 @@
         <title>Página Inicial</title>
     </head>
     <body>
-        <header class="header">
-            <nav>
-                <div class="logo">
-                    <a class="home-button" href="index.jsp"><img src="logo.png" alt="LOGO"></a>
-                </div>
-
-                <div class="search-bar">
-                    <input type="text" class="search" >
-                </div>
-
-                <div class="login">
-                    <a class="login-button" href="login.jsp">LOGIN</a>
-                </div>
-
-                <div class="cart-market">
-                    <a class="cart-button" href="carrinho.jsp"><img class="cart-img" src="img/cart.png" alt="CART"></a>
-                </div>
-            </nav>
-        </header>
+     <%@include file="cabecalho.jsp" %>
         <section class="slider">
             <div class="slider-content">
 
@@ -92,6 +69,7 @@
                 </a>
             </div>
         </section>
+        <%@include file="rodape.jsp" %>
     </body>
 </html>
 

@@ -16,16 +16,7 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <div class="logo">
-                <a href="index.jsp"><img src="logo.png" alt="LOGO"></a>
-
-            </div>
-            <div class="header-buttons">
-                <button class="button-login">Login</button>
-                <button class="button-cart">Cart</button>
-            </div>
-        </header>
+        <%@include file="cabecalho_dados.jsp" %>
         <main>
             <main class="main-content">
                 <table class="product-table">
@@ -58,6 +49,7 @@
             </div>
         </main>
     </div>
+        <%@include file="rodape.jsp" %>
 </body>
 </html>
 
