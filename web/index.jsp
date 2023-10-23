@@ -6,44 +6,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/index.css">
-        <script src="js/index.js" defer></script>
         <title>Página Inicial</title>
     </head>
     <body>
-     <%@include file="cabecalho.jsp" %>
-        <section class="slider">
-            <div class="slider-content">
-
-                <input type="radio" name="btn-radio" id="radio1">
-                <input type="radio" name="btn-radio" id="radio2">
-                <input type="radio" name="btn-radio" id="radio3">
-
-                <div class="slide-box primeiro">
-                    <img src="img/slide1.jpg" alt="slide 1" /> 
-                </div>
-
-                <div class="slide-box">
-                    <img src="img/slide2.jpg" alt="slide 2" >
-                </div>
-
-                <div class="slide-box">
-                    <img src="img/slide3.jpg" alt="slide 3" >
-                </div>
-
-                <div class="nav-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                </div>
-
-                <div class="nav-manual">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                </div>
-
-            </div>
-        </section>
+        <%@include file="cabecalho.jsp" %>
+     <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F781%2Fthumb-1920-781254.png&f=1&nofb=1&ipt=a671d40d9263cf7cee853d7b734e9a4526367d1a5ea6c61f9c02c6c867a309f7&ipo=images" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2Fe%2F7%2F4%2F402846.jpg&f=1&nofb=1&ipt=9cc02dc2dcfc5400f399b34baf0f6045113ef1598b1bed2b0c629f7edfc64453&ipo=images" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.hdwallpaper.nu%2Fwp-content%2Fuploads%2F2016%2F09%2FDigimon_wallpaper_042.jpg&f=1&nofb=1&ipt=b4a6ca02f4c3ee2b2574e26f38358c5282cd4c1deb42ce6efb75fe9393346094&ipo=images" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+  </div>
+        
         <section class="catalogo">
             <div class="item">
                 <a href="#">
