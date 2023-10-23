@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+.container {
+    margin-top: 100px;
+}
+
 body {
     background-color: #f2f2f2;
     color: #000;
@@ -85,4 +89,14 @@ body, p, h1, h2, h3, ul, li {
 .cart-market:hover {
     border: 2px solid #CCCCCC;
     background-color: #C8C8C8;
+}
+
+/* Cadastro */
+
+.form-cadastro {
+    border: 2px solid red;
+}
+.form-cadastro h1 {
+    text-align: center;
+    margin-bottom: 30px;
 }

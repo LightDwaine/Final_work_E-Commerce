@@ -16,7 +16,7 @@
         <link href="style/cabecalho.css" rel="stylesheet" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light border-bottom">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light border-bottom ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.jsp">
                     <img src="img/perfil-icon.png" alt="" width="60" height="30" class="d-inline-block align-text-top">

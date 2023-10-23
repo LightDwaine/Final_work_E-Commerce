@@ -6,17 +6,17 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<%@include file="cabecalho_dados.jsp" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/carrinho.css">
     <title>Login</title>
 </head>
 <body>
     <div class="container">
-        <%@include file="cabecalho_dados.jsp" %>
+        
         <main>
             <main class="main-content">
                 <table class="product-table">

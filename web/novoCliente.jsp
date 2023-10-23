@@ -1,4 +1,5 @@
-<%@include file="cabecalho.jsp" %>
+<%@include file="cabecalho_dados.jsp" %>
+    <div class="form-cadastro">
         <h1>Cadastrar um Novo Cliente</h1>
         <form action="InserirCliente" method="post">
             <div class="mb-3">
@@ -31,6 +32,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
+       </div>
         <br/>
         <a href="Inicio" class="btn btn-primary">Voltar</a>
 <%@include file="rodape.jsp" %>
