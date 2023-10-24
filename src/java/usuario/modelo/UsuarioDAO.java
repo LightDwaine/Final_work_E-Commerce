@@ -11,6 +11,40 @@ import java.sql.*;
  */
 public class UsuarioDAO {
 
+    
+    /**
+     * Método utilizado para recuperar um usuário pelo login
+     * 
+     * @param login
+     * @return 
+     */
+    public Usuario getUsuario(String login) {
+        Usuario usuario = null;
+        try {
+            Class.forName(JDBC_DRIVER);
+            Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+            PreparedStatement ps = c.prepareStatement("SELECT id, nome, endereco, email, login, senha, administrador FROM usuario WHERE login = ?");
+            ps.setString(1, login);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                usuario = new Usuario();
+                usuario.setId(rs.getInt("id"));
+                usuario.setNome(rs.getString("nome"));
+                usuario.setEndereco(rs.getString("endereco"));
+                usuario.setEmail(rs.getString("email"));
+                usuario.setLogin(rs.getString("login"));
+                usuario.setSenha(rs.getString("senha"));
+                usuario.setAdministrador(rs.getBoolean("administrador"));
+            }
+            rs.close();
+            ps.close();
+            c.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            return null;
+        }
+        return usuario;
+    }
+    
     /**
      * Método utilizado para verificar se o login e senha do usuário são válidos
      *
@@ -23,20 +57,17 @@ public class UsuarioDAO {
         try {
             Class.forName(JDBC_DRIVER);
             Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
-            PreparedStatement ps = c.prepareStatement("SELECT * FROM usuario WHERE login = ? AND senha = ?");
+            PreparedStatement ps = c.prepareStatement("SELECT id, nome, endereco, email, login, senha, administrador FROM usuario WHERE login = ? AND senha = ?");
             ps.setString(1, login);
             ps.setString(2, senha);
             ResultSet rs = ps.executeQuery();
-            
             while (rs.next()) {
                 sucesso = true;
-                System.out.println("CERTOOOOOO");
             }
             rs.close();
             ps.close();
             c.close();
         } catch (ClassNotFoundException | SQLException ex) {
-            ex.printStackTrace();
             return false;
         }
         return sucesso;
@@ -64,11 +95,9 @@ public class UsuarioDAO {
             ps.setString(4, login);
             ps.setString(5, senha);
             sucesso = (ps.executeUpdate() == 1);
-            System.out.println("CERTOOOOOO");
             ps.close();
             c.close();
         } catch (ClassNotFoundException | SQLException ex) {
-            ex.printStackTrace();
             return false;
         }
         return sucesso;

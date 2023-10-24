@@ -1,9 +1,6 @@
-<%-- 
-    Document   : cabecalho
-    Created on : 6 de out de 2023, 16:35:15
-    Author     : Leonardo Oliveira Moreira
---%>
 
+
+<%@page import="usuario.modelo.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -31,11 +28,25 @@
                     <button class="search-btn" type="submit"><img src="img/lupa.png" class="search-img"></button>
                 </form>
    
+                <%
+                    Usuario usuario = (Usuario) session.getAttribute("usuario");
+                    if (usuario != null && usuario instanceof Usuario) {
+                %>
+                    <form class="d-flex" action="Logout" method="get">
+                        <input class="form-control me-2" type="text" readonly disabled value="Olá, <%= usuario.getNome() %>!">
+                        <button class="btn btn-outline-danger" type="submit">Sair</button>
+                    </form>
+                
+                 <% 
+                    } else {
+                 %>
                 <div class="collapse navbar-collapse" id="navbarToggler01">
                     <div class="login">
                         <a class="login-button" href="login.jsp"><img class="login-img" src="img/user.png" alt="CART"><span class="block">Login</span></a>
                     </div>
-
+                 <% 
+                    }
+                 %>
                     <div class="cart-market">
                         <a class="cart-button" href="carrinho.jsp"><img class="cart-img" src="img/cart.png" alt="CART"><span class="block">Carrinho</span></a>
                     </div>
@@ -43,4 +54,14 @@
                 </div>
             </div>
         </nav>
-        <div class="container">
+      <div class="container">
+            <%
+            if (request.getAttribute("mensagem") != null) {
+            %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <%= request.getAttribute("mensagem") %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <%
+            }
+            %>
