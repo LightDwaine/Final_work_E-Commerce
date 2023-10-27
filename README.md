@@ -8,8 +8,8 @@ Desenvolvedores:
  _Edvando Ferreira Guilherme_ - 484852.
 
 Tecnologias Utilizadas:
-Html - Linguagem de marcação
-CSS - Linguagem de estilização
-Java - Backend
-JavaScript - Validação de formulário login/cadastro
+Html - Linguagem de marcação <br>
+CSS - Linguagem de estilização <br>
+Java - Backend <br>
+JavaScript - Validação de formulário login/cadastro <br>
 PostgreSQL - Linguagem de Banco de Dados.
