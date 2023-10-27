@@ -7,7 +7,7 @@ Desenvolvedores:
  _Jonathan Oliveira Silva_ - 509013,
  _Edvando Ferreira Guilherme_ - 484852.
 
-Tecnologias Utilizadas:
+Tecnologias Utilizadas: <br>
 Html - Linguagem de marcação <br>
 CSS - Linguagem de estilização <br>
 Java - Backend <br>
