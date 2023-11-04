@@ -35,5 +35,4 @@
        </div>
         <br/>
         <a href="Inicio" class="btn btn-primary">Voltar</a>
-        <p></p>
 <%@include file="rodape.jsp" %>
