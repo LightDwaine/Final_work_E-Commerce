@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import usuario.modelo.Usuario;
 import usuario.modelo.UsuarioDAO;
 
 /**
@@ -28,12 +29,18 @@ public class LoginServlet extends HttpServlet {
         boolean sucesso = usuarioDAO.validarAcesso(login, senha);
         if (sucesso) {
             HttpSession sessao = request.getSession(true);
-            sessao.setAttribute("usuario", usuarioDAO.getUsuario(login));
-            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-            dispatcher.forward(request, response);
+            Usuario usuario = usuarioDAO.getUsuario(login);
+            sessao.setAttribute("usuario", usuario);
+            if (usuario.isAdministrador()) {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/admin.jsp");
+                dispatcher.forward(request, response);
+            } else {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Inicio");
+                dispatcher.forward(request, response);
+            }
         } else {
             request.setAttribute("mensagem", "Login ou senha incorreta");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Inicio");
             dispatcher.forward(request, response);
         }
     }
