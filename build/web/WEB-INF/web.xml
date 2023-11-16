@@ -32,6 +32,26 @@
         <servlet-name>InserirCategoriaServlet</servlet-name>
         <servlet-class>categoria.controle.InserirCategoriaServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>controle</servlet-name>
+        <servlet-class>produto.controle.controle</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExcluirProdutoServlet</servlet-name>
+        <servlet-class>produto.controle.ExcluirProdutoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InserirProdutoServlet</servlet-name>
+        <servlet-class>produto.controle.InserirProdutoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarProdutoServlet</servlet-name>
+        <servlet-class>produto.controle.ListarProdutoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NovoProdutoServlet</servlet-name>
+        <servlet-class>produto.controle.NovoProdutoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -53,6 +73,10 @@
         <url-pattern>/ListarCategoria</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>ListarProdutoServlet</servlet-name>
+        <url-pattern>/ListarProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>ExcluirCategoriaServlet</servlet-name>
         <url-pattern>/ExcluirCategoria</url-pattern>
     </servlet-mapping>
@@ -63,6 +87,26 @@
     <servlet-mapping>
         <servlet-name>InserirCategoriaServlet</servlet-name>
         <url-pattern>/InserirCategoria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controle</servlet-name>
+        <url-pattern>/produtocontrole</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExcluirProdutoServlet</servlet-name>
+        <url-pattern>/ExcluirProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InserirProdutoServlet</servlet-name>
+        <url-pattern>/InserirProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarProdutoServlet</servlet-name>
+        <url-pattern>/ListarProdutoServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NovoProdutoServlet</servlet-name>
+        <url-pattern>/NovoProduto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
