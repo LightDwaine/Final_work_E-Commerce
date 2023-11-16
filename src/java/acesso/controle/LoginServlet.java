@@ -1,4 +1,4 @@
-package acesso;
+package acesso.controle;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -35,12 +35,12 @@ public class LoginServlet extends HttpServlet {
                 RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/admin.jsp");
                 dispatcher.forward(request, response);
             } else {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("Inicio");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
                 dispatcher.forward(request, response);
             }
         } else {
             request.setAttribute("mensagem", "Login ou senha incorreta");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("Inicio");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
             dispatcher.forward(request, response);
         }
     }

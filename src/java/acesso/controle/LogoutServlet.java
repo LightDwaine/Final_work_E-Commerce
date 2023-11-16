@@ -1,4 +1,4 @@
-package acesso;
+package acesso.controle;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -22,7 +22,7 @@ public class LogoutServlet extends HttpServlet {
         HttpSession sessao = request.getSession();
         sessao.invalidate();
         request.setAttribute("mensagem", "Sua sessão foi encerrada");
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Inicio");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);
     }
 

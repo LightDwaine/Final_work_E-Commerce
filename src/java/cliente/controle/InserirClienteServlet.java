@@ -1,4 +1,4 @@
-package cliente;
+package cliente.controle;
 
 import java.io.IOException;
 import java.io.PrintWriter;

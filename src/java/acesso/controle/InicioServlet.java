@@ -1,4 +1,4 @@
-package acesso;
+package acesso.controle;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
