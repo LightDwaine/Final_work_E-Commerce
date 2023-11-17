@@ -13,18 +13,17 @@
         <link href="style/cabecalho.css" rel="stylesheet" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light border-bottom ">
+        <nav class="navbar navbar-expand-lg fixed-top border-bottom ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.jsp">
-                    <img src="img/perfil-icon.png" alt="" width="60" height="30" class="d-inline-block align-text-top">
-                    Shopmon
+                    <img src="img/ShopmonFinal.png" alt="" height class="d-inline-block align-text-top img-logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler01" aria-controls="navbarToggler01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                  <form class="search-bar">
-                    <input class="search" type="search" placeholder="Digimon.." aria-label="Search">
+                    <input class="search " type="search" placeholder="Digimon.." aria-label="Search">
                     <button class="search-btn" type="submit"><img src="img/lupa.png" class="search-img"></button>
                 </form>
    

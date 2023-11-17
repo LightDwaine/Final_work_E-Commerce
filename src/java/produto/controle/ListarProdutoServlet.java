@@ -26,9 +26,9 @@ public class ListarProdutoServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       CategoriaDAO categoriaDAO = new CategoriaDAO();
-        List<Categoria> categorias = categoriaDAO.listar(null);
-        request.setAttribute("categorias", categorias);
+       ProdutoDAO produtoDAO = new ProdutoDAO();
+        List<Produto> produtos = produtoDAO.listarProdutosEmEstoque();
+        request.setAttribute("produtos", produtos);
         RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/produto/listar.jsp");
         dispatcher.forward(request, response);
     }

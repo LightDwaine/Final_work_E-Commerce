@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="form-group">
-                  <p class="cadastro">Não têm cadastro? <a href="novoCliente.jsp">Cadastre-se</a></p>
+                  <p class="link-cadastro">Não têm cadastro? <a href="novoCliente.jsp">Cadastre-se</a></p>
                 </div>
             </form>
         </main>

@@ -32,7 +32,8 @@
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
+        <p class="back">Já está cadastrado? <a href="login.jsp">Faça o login</a></p>
        </div>
         <br/>
-        <a href="Inicio" class="btn btn-primary">Voltar</a>
+      
 <%@include file="rodape.jsp" %>
