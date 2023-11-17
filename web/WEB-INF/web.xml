@@ -52,10 +52,6 @@
         <servlet-name>NovoProdutoServlet</servlet-name>
         <servlet-class>produto.controle.NovoProdutoServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>AlterarCliente</servlet-name>
-        <servlet-class>cliente.controle.AlterarCliente</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -111,10 +107,6 @@
     <servlet-mapping>
         <servlet-name>NovoProdutoServlet</servlet-name>
         <url-pattern>/NovoProduto</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AlterarCliente</servlet-name>
-        <url-pattern>/AlterarCliente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

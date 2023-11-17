@@ -11,9 +11,9 @@
     <%@include file="cabecalho_dados.jsp" %>
     <div class="container-login">
         
-        <main>
             <section class="form-header">
-    
+                
+                <img class="perfil-icon" src="img/user.png">
                 <p id="description" class="description text-center">Acompanhe seus pedidos!<br/>Ele pode chegar antes que você perceba :)</p>
             </section>
 
@@ -38,7 +38,7 @@
                   <p class="link-cadastro">Não têm cadastro? <a href="novoCliente.jsp">Cadastre-se</a></p>
                 </div>
             </form>
-        </main>
+
     </div>
         <%@include file="rodape.jsp" %>
 </body>
