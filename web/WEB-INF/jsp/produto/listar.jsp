@@ -4,17 +4,17 @@
     Author     : leoomoreira
 --%>
 
-<%@page import="categoria.modelo.Categoria"%>
+<%@page import="produto.modelo.Produto"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Página de produtos</title>
     </head>
     <body>
-        <h1>Categorias</h1>
+        <h1>Produtos</h1>
         <%
             if (request.getAttribute("mensagem") != null) {
         %>
@@ -23,10 +23,10 @@
             }
         %>
         <% 
-            List<Categoria> categorias = (List<Categoria>) request.getAttribute("categorias");
-            if (categorias == null || categorias.isEmpty()) {
+            List<Produto> produtos = (List<Produto>) request.getAttribute("produtos");
+            if (produtos == null || produtos.isEmpty()) {
         %>
-        <div>Não há categorias a serem listadas.</div>
+        <div>Não há produtos a serem listados.</div>
         <%
             } else {
         %>
@@ -37,14 +37,14 @@
                 <td>&nbsp;</td>
             </tr>
             <% 
-                for (Categoria c : categorias) {
+                for (Produto c : produtos) {
             %>
             <tr>
                 <td><%= c.getId() %></td>
-                <td><%= c.getNome() %></td>
+                <td><%= c.getDescricao() %></td>
                 <td>
-                    <a href="MostrarCategoria?id=<%= c.getId() %>">Mostrar</a>
-                    <a href="ExcluirCategoria?id=<%= c.getId() %>">Excluir</a>
+                    <a href="MostrarProduto?id=<%= c.getId() %>">Mostrar</a>
+                    <a href="ExcluirProduto?id=<%= c.getId() %>">Excluir</a>
                 </td>
             </tr>
             <%
@@ -54,6 +54,6 @@
         <%
             }
         %>
-        <a href="NovaCategoria">Nova categoria</a>
+        <a href="NovoProduto">Novo produto</a>
     </body>
 </html>

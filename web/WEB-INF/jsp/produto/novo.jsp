@@ -9,12 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Cadastrar produto</title>
     </head>
     <body>
-        <h1>Nova categoria</h1>
-        <form action="InserirCategoria">
-            Nome: <input type="text" name="nome" />
+        <h1>Novo produto</h1>
+        <form action="InserirProduto">
+            Nome: <input type="text" name="descricao" />
+            <br/>
+            Preco: <input type="text" name="preco" />
+            <br/>
+            Foto: <input type="text" name="foto" />
+            <br/>
+            Quantidade: <input type="text" name="quantidade" />
             <br/>
             <input type="submit" value="Cadastrar" />
         </form>
