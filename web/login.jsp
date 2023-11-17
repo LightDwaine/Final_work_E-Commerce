@@ -29,9 +29,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" id="submit" class="submit-button">
-                        Continuar
-                    </button>
+                    <button type="submit" class="btn btn-dark ">Continuar</button>
                 </div>
 
                 <div class="form-group">
