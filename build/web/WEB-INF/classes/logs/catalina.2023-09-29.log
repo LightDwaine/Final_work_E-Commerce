@@ -1,0 +1,165 @@
+29-Sep-2023 18:28:19.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.80
+29-Sep-2023 18:28:19.628 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 23 2023 21:59:38 UTC
+29-Sep-2023 18:28:19.628 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.80.0
+29-Sep-2023 18:28:19.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+29-Sep-2023 18:28:19.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+29-Sep-2023 18:28:19.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+29-Sep-2023 18:28:19.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-20
+29-Sep-2023 18:28:19.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           20.0.1+9-29
+29-Sep-2023 18:28:19.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+29-Sep-2023 18:28:19.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\user\Documents\apache-tomcat-9.0.80
+29-Sep-2023 18:28:19.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\user\Documents\apache-tomcat-9.0.80
+29-Sep-2023 18:28:19.646 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+29-Sep-2023 18:28:19.646 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+29-Sep-2023 18:28:19.646 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+29-Sep-2023 18:28:19.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+29-Sep-2023 18:28:19.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+29-Sep-2023 18:28:19.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\user\Documents\apache-tomcat-9.0.80\conf\logging.properties
+29-Sep-2023 18:28:19.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+29-Sep-2023 18:28:19.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+29-Sep-2023 18:28:19.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+29-Sep-2023 18:28:19.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+29-Sep-2023 18:28:19.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\user\Documents\apache-tomcat-9.0.80
+29-Sep-2023 18:28:19.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\user\Documents\apache-tomcat-9.0.80
+29-Sep-2023 18:28:19.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\user\Documents\apache-tomcat-9.0.80\temp
+29-Sep-2023 18:28:19.655 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.38] using APR version [1.7.4].
+29-Sep-2023 18:28:19.656 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+29-Sep-2023 18:28:19.656 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+29-Sep-2023 18:28:19.723 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1v  1 Aug 2023]
+29-Sep-2023 18:28:20.449 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+29-Sep-2023 18:28:20.608 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1379] milliseconds
+29-Sep-2023 18:28:20.704 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+29-Sep-2023 18:28:20.704 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.80]
+29-Sep-2023 18:28:20.753 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml]
+29-Sep-2023 18:28:20.791 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/smdecommerce] in deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml] has been ignored
+29-Sep-2023 18:28:22.142 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Sep-2023 18:28:22.474 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [131] milliseconds.
+29-Sep-2023 18:28:22.619 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml] has finished in [1.866] ms
+29-Sep-2023 18:28:22.621 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\docs]
+29-Sep-2023 18:28:22.728 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\docs] has finished in [107] ms
+29-Sep-2023 18:28:22.729 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\examples]
+29-Sep-2023 18:28:25.635 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\examples] has finished in [2.906] ms
+29-Sep-2023 18:28:25.636 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\host-manager]
+29-Sep-2023 18:28:25.821 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\host-manager] has finished in [185] ms
+29-Sep-2023 18:28:25.822 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\manager]
+29-Sep-2023 18:28:25.966 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\manager] has finished in [144] ms
+29-Sep-2023 18:28:25.966 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\ROOT]
+29-Sep-2023 18:28:26.050 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\ROOT] has finished in [84] ms
+29-Sep-2023 18:28:26.070 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+29-Sep-2023 18:28:26.436 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [5825] milliseconds
+29-Sep-2023 18:30:59.250 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/smdecommerce]
+29-Sep-2023 18:30:59.402 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml]
+29-Sep-2023 18:30:59.402 WARNING [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/smdecommerce] in deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml] has been ignored
+29-Sep-2023 18:30:59.988 INFO [http-nio-8080-exec-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Sep-2023 18:30:59.998 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml] has finished in [595] ms
+29-Sep-2023 18:31:00.001 INFO [http-nio-8080-exec-8] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/smdecommerce]] after start() had already been called. The second call will be ignored.
+29-Sep-2023 18:49:16.420 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+29-Sep-2023 18:49:16.422 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+29-Sep-2023 18:49:16.443 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+29-Sep-2023 18:49:16.727 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+29-Sep-2023 18:49:16.740 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+29-Sep-2023 22:21:28.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.80
+29-Sep-2023 22:21:28.565 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 23 2023 21:59:38 UTC
+29-Sep-2023 22:21:28.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.80.0
+29-Sep-2023 22:21:28.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+29-Sep-2023 22:21:28.567 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+29-Sep-2023 22:21:28.567 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+29-Sep-2023 22:21:28.567 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-20
+29-Sep-2023 22:21:28.567 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           20.0.1+9-29
+29-Sep-2023 22:21:28.567 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+29-Sep-2023 22:21:28.567 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\user\Documents\apache-tomcat-9.0.80
+29-Sep-2023 22:21:28.568 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\user\Documents\apache-tomcat-9.0.80
+29-Sep-2023 22:21:28.588 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+29-Sep-2023 22:21:28.588 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+29-Sep-2023 22:21:28.588 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+29-Sep-2023 22:21:28.588 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+29-Sep-2023 22:21:28.588 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+29-Sep-2023 22:21:28.589 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\user\Documents\apache-tomcat-9.0.80\conf\logging.properties
+29-Sep-2023 22:21:28.589 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+29-Sep-2023 22:21:28.590 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+29-Sep-2023 22:21:28.590 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+29-Sep-2023 22:21:28.590 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+29-Sep-2023 22:21:28.591 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\user\Documents\apache-tomcat-9.0.80
+29-Sep-2023 22:21:28.591 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\user\Documents\apache-tomcat-9.0.80
+29-Sep-2023 22:21:28.591 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\user\Documents\apache-tomcat-9.0.80\temp
+29-Sep-2023 22:21:28.599 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.38] using APR version [1.7.4].
+29-Sep-2023 22:21:28.601 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+29-Sep-2023 22:21:28.602 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+29-Sep-2023 22:21:28.709 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1v  1 Aug 2023]
+29-Sep-2023 22:21:29.663 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+29-Sep-2023 22:21:29.718 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1598] milliseconds
+29-Sep-2023 22:21:29.851 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+29-Sep-2023 22:21:29.852 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.80]
+29-Sep-2023 22:21:30.014 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml]
+29-Sep-2023 22:21:30.049 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/smdecommerce] in deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml] has been ignored
+29-Sep-2023 22:21:30.115 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:662)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:689)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1888)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:582)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:472)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1617)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:922)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@2b72cb8a]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 35 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\user\Desktop\Nova pasta\final_work_e-commerce\build\web] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 39 more
+29-Sep-2023 22:21:30.173 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml] has finished in [151] ms
+29-Sep-2023 22:21:30.174 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\docs]
+29-Sep-2023 22:21:31.053 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [216] milliseconds.
+29-Sep-2023 22:21:31.556 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\docs] has finished in [1.382] ms
+29-Sep-2023 22:21:31.556 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\examples]
+29-Sep-2023 22:21:37.325 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\examples] has finished in [5.769] ms
+29-Sep-2023 22:21:37.326 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\host-manager]
+29-Sep-2023 22:21:37.583 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\host-manager] has finished in [257] ms
+29-Sep-2023 22:21:37.584 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\manager]
+29-Sep-2023 22:21:37.750 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\manager] has finished in [166] ms
+29-Sep-2023 22:21:37.750 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\ROOT]
+29-Sep-2023 22:21:37.880 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\user\Documents\apache-tomcat-9.0.80\webapps\ROOT] has finished in [129] ms
+29-Sep-2023 22:21:37.900 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+29-Sep-2023 22:21:38.260 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [8541] milliseconds
+29-Sep-2023 22:21:42.117 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/smdecommerce]
+29-Sep-2023 22:21:42.239 INFO [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml]
+29-Sep-2023 22:21:42.241 WARNING [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/smdecommerce] in deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml] has been ignored
+29-Sep-2023 22:21:43.737 INFO [http-nio-8080-exec-3] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Sep-2023 22:21:43.804 INFO [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\user\Documents\apache-tomcat-9.0.80\conf\Catalina\localhost\smdecommerce.xml] has finished in [1.564] ms
+29-Sep-2023 22:21:43.814 INFO [http-nio-8080-exec-10] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/smdecommerce]] after start() had already been called. The second call will be ignored.

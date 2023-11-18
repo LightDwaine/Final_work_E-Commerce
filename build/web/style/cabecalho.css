@@ -1,0 +1,138 @@
+/* Estilos gerais */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+body {
+    background-color: #def7eb;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+body, p, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+
+.navbar {
+    background-color: #279572;
+    overflow: hidden;
+}
+
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  justify-content: end;
+}
+
+.img-logo {
+    width: 70%;
+   
+}
+
+.search-bar {
+    width: 60%; /* Altera a largura para 60% da tela */
+    display: flex; /* Alinha elementos horizontalmente */
+    justify-content: center; /* Alinha o input à direita da barra de pesquisa */
+    margin: 0 auto 0 auto;
+
+}
+
+.search {
+    width: 90%; /* Preenche todo o espaço disponível na barra de pesquisa */
+    height: 2.5rem;
+    padding-left: 10px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 12px 0 0 12px; 
+    background-color: #def7eb;
+}
+
+.search-btn {
+    border-radius: 0 12px 12px 0;
+    
+}
+
+.login {
+    margin: 0 3px 0 0;
+    padding: 0 10px 0 10px;
+    text-align: center;
+    border: 2px solid rgba(0,0,0,0);
+}
+
+.cart-market {
+    margin-right: 5%;
+    margin: auto 0 auto 0;
+    border: 1px solid rgba(0,0,0,0);
+    text-align: center;
+    padding: 0 5px;
+}
+
+.block {
+    display: block;
+}
+
+.login-button,
+.cart-button {
+    text-decoration: none; 
+    color: #000;
+}
+
+.search-img, .login-img, .cart-img {
+    width: 30px;
+}
+    
+.cart-img, .login-img {
+    margin-top: 2px;
+}
+
+.login:hover {
+    border: 2px solid #CCCCCC;
+    background-color: #def7eb;
+}
+
+.cart-market:hover {
+    border: 2px solid #CCCCCC;
+    background-color: #def7eb;
+}
+
+form.user-area {
+    margin: 0 15px;
+}
+
+/* Cadastro */
+
+.form-cadastro {
+    border: 2px solid #73ba98;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 3px 3px #428766; 
+}
+.form-cadastro h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+button.btn-dark {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 40%;
+    width: 20%;
+    border-radius: 0.75rem;
+}
+
+.back {
+    margin: 0 auto;
+    text-align: center;
+}
