@@ -30,7 +30,7 @@
                 <input type="password" name="senha" class="form-control" id="inputSenha" aria-describedby="senhaHelp">
                 <div id="senhaHelp" class="form-text">Campo obrigatótio.</div>
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-dark ">Cadastrar</button>
         </form>
         <p class="back">Já está cadastrado? <a href="login.jsp">Faça o login</a></p>
        </div>

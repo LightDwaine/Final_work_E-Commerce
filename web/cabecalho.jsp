@@ -31,7 +31,7 @@
                     Usuario usuario = (Usuario) session.getAttribute("usuario");
                     if (usuario != null && usuario instanceof Usuario) {
                 %>
-                    <form class="d-flex" action="Logout" method="get">
+                    <form class="d-flex user-area" action="Logout" method="get">
                         <input class="form-control me-2" type="text" readonly disabled value="Olá, <%= usuario.getNome() %>!">
                         <button class="btn btn-outline-danger" type="submit">Sair</button>
                     </form>
