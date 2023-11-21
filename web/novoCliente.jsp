@@ -1,4 +1,4 @@
-<%@include file="cabecalho_dados.jsp" %>
+<%@include file="./template/cabecalho_dados.jsp" %>
     <div class="form-cadastro">
         <h1>Cadastrar um Novo Cliente</h1>
         <form action="InserirCliente" method="post">
@@ -36,4 +36,4 @@
        </div>
         <br/>
       
-<%@include file="rodape.jsp" %>
+<%@include file="./template/rodape.jsp" %>

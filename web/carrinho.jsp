@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<%@include file="cabecalho_dados.jsp" %>
+<%@include file="./template/cabecalho_dados.jsp" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +49,7 @@
             </div>
         </main>
     </div>
-        <%@include file="rodape.jsp" %>
+        <%@include file="./template/rodape.jsp" %>
 </body>
 </html>
 

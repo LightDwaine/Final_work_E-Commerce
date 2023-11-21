@@ -136,3 +136,26 @@ button.btn-dark {
     margin: 0 auto;
     text-align: center;
 }
+
+/* ADMINISTRADOR */
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.manager-btn {
+    height: 200px;
+    width: 400px;
+    background-color: #279572;
+    color: #000;
+    text-align: center;
+    display: inline-flex;
+}
+
+.text-center-div {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+

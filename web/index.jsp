@@ -7,7 +7,7 @@
         <title>Página Inicial</title>
     </head>
     <body>
-        <%@include file="cabecalho.jsp" %>
+        <%@include file="./template/cabecalho.jsp" %>
      <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -60,7 +60,7 @@
                 </a>
             </div>
         </section>
-        <%@include file="rodape.jsp" %>
+        <%@include file="./template/rodape.jsp" %>
     </body>
 </html>
 
