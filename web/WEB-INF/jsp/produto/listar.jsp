@@ -7,6 +7,7 @@
 <%@page import="produto.modelo.Produto"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="/template/cabecalho_dados.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,7 +31,7 @@
         <%
             } else {
         %>
-        <table>
+        <table class="custom-table">
             <tr>
                 <td>Id</td>
                 <td>Nome</td>

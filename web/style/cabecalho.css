@@ -17,7 +17,7 @@ body {
     font-weight: 600;
 }
 
-body, p, h1, h2, h3, ul, li {
+body, p, h1, h2, h3, ul, li, table {
     margin: 0;
     padding: 0;
 }
@@ -111,6 +111,41 @@ form.user-area {
     margin: 0 15px;
 }
 
+/* Logado */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+
 /* Cadastro */
 
 .form-cadastro {
@@ -144,18 +179,60 @@ button.btn-dark {
     text-align: center;
 }
 
+.main-admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 .manager-btn {
-    height: 200px;
-    width: 400px;
+    height: 100px;
+    width: 300px;
     background-color: #279572;
     color: #000;
     text-align: center;
     display: inline-flex;
+    margin-top: 50px;
+}
+
+div.manager-btn:first-child {
+    margin-left: 40px;
+}
+
+div.manager-btn:last-child {
+    margin-right: 40px;
 }
 
 .text-center-div {
     margin: auto;
     justify-content: center;
     align-items: center;
+}
+
+/* Categorias */
+
+.custom-table {
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 1000px;
+}
+
+.custom-table td {
+    border: 1px solid black; /* Adiciona borda a todas as células */
+    padding: 8px; /* Adiciona espaçamento interno */
+}
+
+/* Remove a borda da última célula (última coluna) */
+.custom-table td:last-child {
+    border: none;
+}
+
+.first-row {
+    background-color: #279572;
+}
+
+.last-col {
+    background-color: #def7eb;
 }
 

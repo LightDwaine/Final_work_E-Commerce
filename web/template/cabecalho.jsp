@@ -30,14 +30,31 @@
                 <%
                     Usuario usuario = (Usuario) session.getAttribute("usuario");
                     if (usuario != null && usuario instanceof Usuario) {
+                        if (usuario.isAdministrador()) {
+                        
                 %>
+                    <form class="d-flex user-area" action="Logout" method="get">
+                        <select class="form-select me-2" name="user_dropdown">
+                            
+                            <option value="1" selected hidden>Olá, <%= usuario.getNome() %>!</option>
+                            <!-- Adicione outras opções conforme necessário -->
+                            <option value="2">Opção 2</option>
+                            <option value="3">Opção 3</option>
+                        </select>
+                        <button class="btn btn-outline-danger" type="submit">Sair</button>
+                    </form>
+                    <%
+                        }
+                        else {
+                    %>
+                
                     <form class="d-flex user-area" action="Logout" method="get">
                         <input class="form-control me-2" type="text" readonly disabled value="Olá, <%= usuario.getNome() %>!">
                         <button class="btn btn-outline-danger" type="submit">Sair</button>
                     </form>
                 
                  <% 
-                    } else {
+                    }} else {
                  %>
                 <div class="collapse navbar-collapse" id="navbarToggler01">
                     <div class="login">

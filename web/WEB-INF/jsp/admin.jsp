@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <%@include file="/template/cabecalho_dados.jsp" %>
 
 <!DOCTYPE html>
@@ -18,7 +17,7 @@
         <header>
             <h1 class="title">Pagina de modificações do administrador</h1>
         </header>
-        <main>
+        <main class="main-admin">
             <a href="ListarProduto"><div class="manager-btn"><span class="text-center-div">Cadastro de Produtos</span></div></a> 
             <a href="ListarCategoria"><div class="manager-btn"><span class="text-center-div">Cadastro de Categorias</span></div></a>
         </main>
