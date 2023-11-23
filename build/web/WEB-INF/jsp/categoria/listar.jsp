@@ -7,6 +7,7 @@
 <%@page import="categoria.modelo.Categoria"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="/template/cabecalho_dados.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,6 +15,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <main class="main-ctg">
         <h1>Categorias</h1>
         <%
             if (request.getAttribute("mensagem") != null) {
@@ -30,11 +32,11 @@
         <%
             } else {
         %>
-        <table>
-            <tr>
+        <table class="custom-table">
+            <tr class="first-row">
                 <td>Id</td>
                 <td>Nome</td>
-                <td>&nbsp;</td>
+                <td class="last-col">&nbsp;</td>
             </tr>
             <% 
                 for (Categoria c : categorias) {
@@ -55,5 +57,6 @@
             }
         %>
         <a href="NovaCategoria">Nova categoria</a>
+        </main>
     </body>
 </html>

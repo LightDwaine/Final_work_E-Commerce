@@ -8,7 +8,7 @@
     <title>Login</title>
 </head>
 <body>
-    <%@include file="cabecalho_dados.jsp" %>
+    <%@include file="./template/cabecalho_dados.jsp" %>
     <div class="container-login">
         
             <section class="form-header">
@@ -38,6 +38,6 @@
             </form>
 
     </div>
-        <%@include file="rodape.jsp" %>
+        <%@include file="./template/rodape.jsp" %>
 </body>
 </html>

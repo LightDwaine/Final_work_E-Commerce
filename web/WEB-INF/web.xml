@@ -52,6 +52,14 @@
         <servlet-name>NovoProdutoServlet</servlet-name>
         <servlet-class>produto.controle.NovoProdutoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AtualizarCategoriaServlet</servlet-name>
+        <servlet-class>categoria.controle.AtualizarCategoriaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MostrarCategoriaServlet</servlet-name>
+        <servlet-class>categoria.controle.MostrarCategoriaServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -107,6 +115,14 @@
     <servlet-mapping>
         <servlet-name>NovoProdutoServlet</servlet-name>
         <url-pattern>/NovoProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AtualizarCategoriaServlet</servlet-name>
+        <url-pattern>/AtualizarCategoria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MostrarCategoriaServlet</servlet-name>
+        <url-pattern>/MostrarCategoria</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

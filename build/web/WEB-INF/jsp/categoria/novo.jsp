@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="/template/cabecalho_dados.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
