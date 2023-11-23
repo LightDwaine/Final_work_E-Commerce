@@ -5,23 +5,27 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="/template/cabecalho_dados.jsp" %>
+<%@include file="/template/cabecalho.jsp" %>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Shopmon ADMIN</title>
+       
     </head>
     <body>
         <header>
             <h1 class="title">Pagina de modificações do administrador</h1>
         </header>
+         
         <main class="main-admin">
             <a href="ListarProduto"><div class="manager-btn"><span class="text-center-div">Cadastro de Produtos</span></div></a> 
             <a href="ListarCategoria"><div class="manager-btn"><span class="text-center-div">Cadastro de Categorias</span></div></a>
-            <a href="WEB-INF/alterarAdmin.jsp"><div class="manager-btn"><span class="text-center-div">Alterar dados do ADMIN</span></div></a>
+            <a href="AlterarDadosAdmin"><div class="manager-btn"><span class="text-center-div">Alterar dados do ADMIN</span></div></a>
         
         </main>
+      
+                 
     </body>
 </html>

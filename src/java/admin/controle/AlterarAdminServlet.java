@@ -35,7 +35,7 @@ public class AlterarAdminServlet extends HttpServlet {
             request.setAttribute("mensagem", "Não foi possível atualizar seus dados de admin");
         }
        
-        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/admin.jsp");
         dispatcher.forward(request, response);
     }
 

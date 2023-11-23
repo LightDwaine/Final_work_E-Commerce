@@ -76,6 +76,14 @@
         <servlet-name>AlterarAdminServlet</servlet-name>
         <servlet-class>admin.controle.AlterarAdminServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ConfigurarAdminServlet</servlet-name>
+        <servlet-class>admin.controle.ConfigurarAdminServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlterarDadosAdminServlet</servlet-name>
+        <servlet-class>admin.controle.AlterarDadosAdminServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -155,6 +163,14 @@
     <servlet-mapping>
         <servlet-name>AlterarAdminServlet</servlet-name>
         <url-pattern>/AlterarAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConfigurarAdminServlet</servlet-name>
+        <url-pattern>/ConfigurarAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarDadosAdminServlet</servlet-name>
+        <url-pattern>/AlterarDadosAdmin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
