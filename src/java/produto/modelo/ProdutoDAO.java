@@ -86,5 +86,45 @@ public class ProdutoDAO {
         }
         return sucesso;
     }
+    
+     public Produto listar(int id) {
+        Produto p = null;
+        try {
+            Class.forName(JDBC_DRIVER);
+            Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+            PreparedStatement ps = c.prepareStatement("SELECT id, descricao FROM produto WHERE id = ?");
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                p = new Produto();
+                p.setId(rs.getInt("id"));
+                p.setDescricao(rs.getString("descricao"));
+            }
+            rs.close();
+            ps.close();
+            c.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            return null;
+        }
+        return p;
+    }
+     
+     public boolean atualizar(String descricao, int id) {
+        boolean sucesso = false;
+        try {
+            Class.forName(JDBC_DRIVER);
+            Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+            PreparedStatement ps = c.prepareStatement("UPDATE produto SET descricao = ? WHERE id = ?");
+            ps.setString(1, descricao);
+            ps.setInt(2, id);
+            sucesso = (ps.executeUpdate() == 1);
+            ps.close();
+            c.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            System.out.println(ex);   
+            return false;
+        }
+        return sucesso;
+    }
 
 }

@@ -4,20 +4,20 @@
     Author     : leoomoreira
 --%>
 
-<%@page import="categoria.modelo.Categoria"%>
+<%@page import="produto.modelo.Produto"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Editar dados da Categoria</title>
+        <title>Editar dados do Produto</title>
     </head>
     <body>
-        <h1>Atualizar categoria</h1>
-        <% Categoria c = (Categoria) request.getAttribute("categoria"); %>
-        <form action="AtualizarCategoria">
+        <h1>Atualizar produto</h1>
+        <% Produto c = (Produto) request.getAttribute("produto"); %>
+        <form action="AtualizarProduto">
             <input type="hidden" name="id" value="<%= c.getId() %>" />
-            Nome: <input type="text" name="nome" value="<%= c.getNome() %>" />
+            Nome: <input type="text" name="descricao" value="<%= c.getDescricao() %>" />
             <br/>
             <input type="submit" value="Salvar" />
         </form>
