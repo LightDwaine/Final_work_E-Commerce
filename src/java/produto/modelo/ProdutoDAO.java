@@ -109,14 +109,16 @@ public class ProdutoDAO {
         return p;
     }
      
-     public boolean atualizar(String descricao, int id) {
+     public boolean atualizar(String descricao, int preco, int quantidade, int id) {
         boolean sucesso = false;
         try {
             Class.forName(JDBC_DRIVER);
             Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
-            PreparedStatement ps = c.prepareStatement("UPDATE produto SET descricao = ? WHERE id = ?");
+            PreparedStatement ps = c.prepareStatement("UPDATE produto SET descricao = ?, preco = ?, quantidade = ? WHERE id = ?");
             ps.setString(1, descricao);
-            ps.setInt(2, id);
+            ps.setInt(2, preco);
+            ps.setInt(3, quantidade);
+            ps.setInt(4, id);
             sucesso = (ps.executeUpdate() == 1);
             ps.close();
             c.close();

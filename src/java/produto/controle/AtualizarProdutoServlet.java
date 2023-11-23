@@ -21,8 +21,10 @@ public class AtualizarProdutoServlet extends HttpServlet {
             throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String descricao = request.getParameter("descricao");
+        int preco = Integer.parseInt(request.getParameter("preco"));
+        int quantidade = Integer.parseInt(request.getParameter("quantidade"));
         ProdutoDAO produtoDAO = new ProdutoDAO();
-        boolean sucesso = produtoDAO.atualizar(descricao, id);
+        boolean sucesso = produtoDAO.atualizar(descricao, preco, quantidade, id);
         if (sucesso) {
             request.setAttribute("mensagem", "Produto atualizado com sucesso");
         } else {

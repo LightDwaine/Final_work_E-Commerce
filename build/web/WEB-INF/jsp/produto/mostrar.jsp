@@ -17,7 +17,11 @@
         <% Produto c = (Produto) request.getAttribute("produto"); %>
         <form action="AtualizarProduto">
             <input type="hidden" name="id" value="<%= c.getId() %>" />
-            Nome: <input type="text" name="descricao" value="<%= c.getDescricao() %>" />
+            Descrição: <input type="text" name="descricao" value="<%= c.getDescricao() %>" />
+            <br/>
+            Preço: <input type="text" name="preco" value="<%= c.getPreco() %>" />
+            <br/>
+             Quantidade: <input type="text" name="quantidade" value="<%= c.getQuantidade() %>" />
             <br/>
             <input type="submit" value="Salvar" />
         </form>
