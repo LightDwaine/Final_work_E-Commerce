@@ -20,6 +20,8 @@
         <main class="main-admin">
             <a href="ListarProduto"><div class="manager-btn"><span class="text-center-div">Cadastro de Produtos</span></div></a> 
             <a href="ListarCategoria"><div class="manager-btn"><span class="text-center-div">Cadastro de Categorias</span></div></a>
+            <a href="WEB-INF/alterarAdmin.jsp"><div class="manager-btn"><span class="text-center-div">Alterar dados do ADMIN</span></div></a>
+        
         </main>
     </body>
 </html>

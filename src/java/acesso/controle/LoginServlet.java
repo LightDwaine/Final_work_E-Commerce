@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
             Usuario usuario = usuarioDAO.getUsuario(login);
             sessao.setAttribute("usuario", usuario);
             if (usuario.isAdministrador()) {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/admin.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/usuario/alterarAdmin.jsp");
                 dispatcher.forward(request, response);
             } else {
                 RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/usuario/alterarCliente.jsp");

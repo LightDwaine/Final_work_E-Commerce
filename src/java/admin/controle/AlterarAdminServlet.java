@@ -1,4 +1,4 @@
-package cliente.controle;
+package admin.controle;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,7 +15,7 @@ import usuario.modelo.UsuarioDAO;
  *
  * Classe que representa a ação de inserir um novo cliente
  */
-public class AlterarClienteServlet extends HttpServlet {
+public class AlterarAdminServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -27,12 +27,12 @@ public class AlterarClienteServlet extends HttpServlet {
         String senha = request.getParameter("senha");
 
         UsuarioDAO usuarioDAO = new UsuarioDAO();
-        boolean sucesso = usuarioDAO.atualizarCliente(nome, endereco, email, login, senha);
+        boolean sucesso = usuarioDAO.atualizarAdmin(nome, endereco, email, login, senha);
 
          if (sucesso) {
-            request.setAttribute("mensagem", "Seus dados foram atualizados com sucesso");
+            request.setAttribute("mensagem", "Seus dados de admin foram atualizados com sucesso");
         } else {
-            request.setAttribute("mensagem", "Não foi possível atualizar seus dados");
+            request.setAttribute("mensagem", "Não foi possível atualizar seus dados de admin");
         }
        
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");

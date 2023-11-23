@@ -72,6 +72,10 @@
         <servlet-name>AlterarClienteServlet</servlet-name>
         <servlet-class>cliente.controle.AlterarClienteServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AlterarAdminServlet</servlet-name>
+        <servlet-class>admin.controle.AlterarAdminServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -147,6 +151,10 @@
     <servlet-mapping>
         <servlet-name>AlterarClienteServlet</servlet-name>
         <url-pattern>/AlterarCliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarAdminServlet</servlet-name>
+        <url-pattern>/AlterarAdmin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
