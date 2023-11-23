@@ -68,6 +68,10 @@
         <servlet-name>AtualizarProdutoServlet</servlet-name>
         <servlet-class>produto.controle.AtualizarProdutoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AlterarClienteServlet</servlet-name>
+        <servlet-class>cliente.controle.AlterarClienteServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -139,6 +143,10 @@
     <servlet-mapping>
         <servlet-name>AtualizarProdutoServlet</servlet-name>
         <url-pattern>/AtualizarProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarClienteServlet</servlet-name>
+        <url-pattern>/AlterarCliente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
