@@ -84,6 +84,10 @@
         <servlet-name>AlterarDadosAdminServlet</servlet-name>
         <servlet-class>admin.controle.AlterarDadosAdminServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AlterarDadosClienteServlet</servlet-name>
+        <servlet-class>cliente.controle.AlterarDadosClienteServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -171,6 +175,10 @@
     <servlet-mapping>
         <servlet-name>AlterarDadosAdminServlet</servlet-name>
         <url-pattern>/AlterarDadosAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarDadosClienteServlet</servlet-name>
+        <url-pattern>/AlterarDadosCliente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

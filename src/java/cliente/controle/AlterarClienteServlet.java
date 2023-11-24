@@ -31,6 +31,7 @@ public class AlterarClienteServlet extends HttpServlet {
 
          if (sucesso) {
             request.setAttribute("mensagem", "Seus dados foram atualizados com sucesso");
+            
         } else {
             request.setAttribute("mensagem", "Não foi possível atualizar seus dados");
         }

@@ -33,25 +33,27 @@
                         if (usuario.isAdministrador()) {
                         
                 %>
-                    <form class="d-flex user-area" action="Logout" method="get">
-                        <select class="form-select me-2" name="user_dropdown">
-                            
-                            <option value="1" selected hidden>Olá, <%= usuario.getNome() %>!</option>
-                            <!-- Adicione outras opções conforme necessário -->
-                            <option value="2">Opção 2</option>
-                            <option value="3">Opção 3</option>
-                        </select>
-                        <button class="btn btn-outline-danger" type="submit">Sair</button>
-                    </form>
+                <div class="dropdown">
+                  <button class="dropbtn">Olá, <%= usuario.getNome() %>!</button>
+                  <div class="dropdown-content">
+                  <a href="ConfigurarAdmin">Gerenciar</a>
+                  <a href="AlterarDadosAdmin">Alterar dados</a>
+                  <a href="Logout">Logout</a>
+                  </div>
+                </div>
+                    
                     <%
                         }
                         else {
                     %>
                 
-                    <form class="d-flex user-area" action="Logout" method="get">
-                        <input class="form-control me-2" type="text" readonly disabled value="Olá, <%= usuario.getNome() %>!">
-                        <button class="btn btn-outline-danger" type="submit">Sair</button>
-                    </form>
+                 <div class="dropdown">
+                  <button class="dropbtn">Olá, <%= usuario.getNome() %>!</button>
+                  <div class="dropdown-content">
+                  <a href="AlterarDadosCliente">Alterar dados</a>
+                  <a href="Logout">Logout</a>
+                  </div>
+                </div>
                 
                  <% 
                     }} else {
