@@ -17,6 +17,7 @@
         <h1>Alterar seus dados</h1>
         <% Usuario usuario = (Usuario) session.getAttribute("usuario"); %>
         <form action="AlterarCliente" method="post">
+            <input type="hidden" name="id" value="<%= usuario.getId() %>" />
             <div class="mb-3">
                 <label for="inputNome" class="form-label">Nome completo</label>
                 <input type="text" name="nome" class="form-control" id="inputNome" aria-describedby="nomeHelp" value="<%= usuario.getNome()%>">

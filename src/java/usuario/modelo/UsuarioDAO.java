@@ -103,18 +103,18 @@ public class UsuarioDAO {
         return sucesso;
     }
     
-    public boolean atualizarCliente(String nome, String endereco, String email, String login, String senha) {
+    public boolean atualizarCliente(String nome, String endereco, String email, String login, String senha, int id) {
         boolean sucesso = false;
         try {
             Class.forName(JDBC_DRIVER);
             Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
-            PreparedStatement ps = c.prepareStatement("UPDATE usuario SET nome = ?, endereco = ?, email = ?, login = ?, senha = ?, administrador = false WHERE login = ?");
+            PreparedStatement ps = c.prepareStatement("UPDATE usuario SET nome = ?, endereco = ?, email = ?, login = ?, senha = ?, administrador = false WHERE id = ?");
             ps.setString(1, nome);
             ps.setString(2, endereco);
             ps.setString(3, email);
             ps.setString(4, login);
             ps.setString(5, senha);
-            ps.setString(6, login);
+            ps.setInt(6, id);
             sucesso = (ps.executeUpdate() == 1);
             ps.close();
             c.close();
@@ -125,23 +125,22 @@ public class UsuarioDAO {
         return sucesso;
     }
     
-    public boolean atualizarAdmin(String nome, String endereco, String email, String login, String senha) {
+    public boolean atualizarAdmin(String nome, String endereco, String email, String login, String senha, int id) {
         boolean sucesso = false;
         try {
             Class.forName(JDBC_DRIVER);
             Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
-            PreparedStatement ps = c.prepareStatement("UPDATE usuario SET nome = ?, endereco = ?, email = ?, login = ?, senha = ?, administrador = true WHERE login = ?");
+            PreparedStatement ps = c.prepareStatement("UPDATE usuario SET nome = ?, endereco = ?, email = ?, login = ?, senha = ?, administrador = true WHERE id = ?");
             ps.setString(1, nome);
             ps.setString(2, endereco);
             ps.setString(3, email);
             ps.setString(4, login);
             ps.setString(5, senha);
-            ps.setString(6, login);
+            ps.setInt(6, id);
             sucesso = (ps.executeUpdate() == 1);
             ps.close();
             c.close();
-        } catch (ClassNotFoundException | SQLException ex) {
-            System.out.println(ex);   
+        } catch (ClassNotFoundException | SQLException ex) {  
             return false;
         }
         return sucesso;

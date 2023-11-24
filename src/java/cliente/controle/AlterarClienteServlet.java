@@ -20,6 +20,7 @@ public class AlterarClienteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
         String nome = request.getParameter("nome");
         String endereco = request.getParameter("endereco");
         String email = request.getParameter("email");
@@ -27,7 +28,7 @@ public class AlterarClienteServlet extends HttpServlet {
         String senha = request.getParameter("senha");
 
         UsuarioDAO usuarioDAO = new UsuarioDAO();
-        boolean sucesso = usuarioDAO.atualizarCliente(nome, endereco, email, login, senha);
+        boolean sucesso = usuarioDAO.atualizarCliente(nome, endereco, email, login, senha, id);
 
          if (sucesso) {
             request.setAttribute("mensagem", "Seus dados foram atualizados com sucesso");
