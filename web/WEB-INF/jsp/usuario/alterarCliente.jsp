@@ -47,7 +47,7 @@
                 <div id="senhaHelp" class="form-text">Campo obrigatório.</div>
             </div>
             <button type="submit" class="btn btn-dark ">Atualizar</button>
-             <p >Não quer alterar? <a href="index.jsp">Sair</a></p>
+             <p >Não quer alterar? <a href="Inicio">Voltar</a></p>
         </form>
        </div>
         <br/>

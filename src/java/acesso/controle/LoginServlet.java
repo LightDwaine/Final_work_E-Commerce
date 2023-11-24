@@ -32,15 +32,15 @@ public class LoginServlet extends HttpServlet {
             Usuario usuario = usuarioDAO.getUsuario(login);
             sessao.setAttribute("usuario", usuario);
             if (usuario.isAdministrador()) {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Inicio");
                 dispatcher.forward(request, response);
             } else {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Inicio");
                 dispatcher.forward(request, response);
             }
         } else {
             request.setAttribute("mensagem", "Login ou senha incorreta");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Inicio");
             dispatcher.forward(request, response);
         }
     }

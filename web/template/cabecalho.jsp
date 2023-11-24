@@ -15,7 +15,7 @@
     <body>
         <nav class="navbar navbar-expand-lg fixed-top border-bottom ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.jsp">
+                <a class="navbar-brand" href="Inicio">
                     <img src="img/ShopmonFinal.png" alt="" height class="d-inline-block align-text-top img-logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler01" aria-controls="navbarToggler01" aria-expanded="false" aria-label="Toggle navigation">

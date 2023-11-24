@@ -7,6 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import usuario.modelo.Usuario;
 import usuario.modelo.UsuarioDAO;
 
 /**
@@ -32,7 +34,9 @@ public class AlterarClienteServlet extends HttpServlet {
 
          if (sucesso) {
             request.setAttribute("mensagem", "Seus dados foram atualizados com sucesso");
-            
+            HttpSession sessao = request.getSession(true);
+            Usuario usuario = usuarioDAO.getUsuario(login);
+            sessao.setAttribute("usuario", usuario);
         } else {
             request.setAttribute("mensagem", "Não foi possível atualizar seus dados");
         }
