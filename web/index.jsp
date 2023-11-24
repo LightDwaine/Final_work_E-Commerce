@@ -1,14 +1,16 @@
+<%@page import="java.text.DecimalFormat"%>
+<%@page import="produto.modelo.Produto"%>
+<%@page import="java.util.List"%>
+<%@include file="cabecalho.jsp" %>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style/index.css">
-        <title>Página Inicial</title>
-    </head>
-    <body>
-        <%@include file="./template/cabecalho.jsp" %>
-     <div id="carouselExampleIndicators" class="carousel slide">
+<head>
+    <link rel="stylesheet" href="style/index.css">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -33,34 +35,32 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-  </div>
-        
-        <section class="catalogo">
-            <div class="item">
-                <a href="#">
-                    <img src="img/item1.jpg" alt="Produto 1">
-                    <p class="preco">R$ 50,00</p>
-                    <p class="estoque">Em estoque: 10 unidades</p>
-                </a>
+   </div>
+    <%
+    List<Produto> produtos = (List<Produto>) request.getAttribute("produtosEmEstoque");
+    if (produtos != null && !produtos.isEmpty()) {
+        for (int i = 0; i < produtos.size(); i++) {
+            Produto p = produtos.get(i);
+    %>
+    <section class="catalogo">
+        <form action="solicitar.jsp" method="POST">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="ExibirProdutoFoto?id=<%= p.getId()%>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= p.getDescricao()%></h5>
+                            <p class="card-text"><%= p.getDescricao()%></p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted"><a href="AdicionarProdutoCarrinho?produtoId=<%= p.getId()%>" class="btn btn-primary">Comprar</a></small>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="item">
-                <a href="#">
-                    <img src="img/item2.jpg" alt="Produto 2">
-                    <p class="preco">R$ 35,00</p>
-                    <p class="estoque">Em estoque: 5 unidades</p>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="#">
-                    <img src="img/item3.png" alt="Produto 3">
-                    <p class="preco">R$ 75,00</p>
-                    <p class="estoque">Em estoque: 15 unidades</p>
-                </a>
-            </div>
-        </section>
-        <%@include file="./template/rodape.jsp" %>
-    </body>
+        </form>
+    </section>
+<% } } %>
+<%@include file="./template/rodape.jsp" %>
+</body>
 </html>
-
