@@ -1,7 +1,7 @@
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="produto.modelo.Produto"%>
 <%@page import="java.util.List"%>
-<%@include file="cabecalho.jsp" %>
+<%@include file="template/cabecalho.jsp" %>
 
 <!DOCTYPE html>
 <html>
@@ -61,6 +61,6 @@
         </form>
     </section>
 <% } } %>
-<%@include file="./template/rodape.jsp" %>
+<%@include file="/template/rodape.jsp" %>
 </body>
 </html>
