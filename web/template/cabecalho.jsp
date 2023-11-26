@@ -51,6 +51,7 @@
                   <button class="dropbtn">Olá, <%= usuario.getNome() %>!</button>
                   <div class="dropdown-content">
                   <a href="AlterarDadosCliente">Alterar dados</a>
+                  <a href="VerVendasCliente?id=<%= usuario.getId()%>">Minhas compras</a>
                   <a href="Logout">Logout</a>
                   </div>
                 </div>

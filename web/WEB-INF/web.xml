@@ -100,6 +100,10 @@
         <servlet-name>VendaInserirServlet</servlet-name>
         <servlet-class>venda.controle.VendaInserirServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VerVendasClienteServlet</servlet-name>
+        <servlet-class>venda.controle.VerVendasClienteServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -203,6 +207,10 @@
     <servlet-mapping>
         <servlet-name>VendaInserirServlet</servlet-name>
         <url-pattern>/VendaInserir</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerVendasClienteServlet</servlet-name>
+        <url-pattern>/VerVendasCliente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

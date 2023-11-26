@@ -1,6 +1,6 @@
 package categoria.modelo;
 
-import produto.modelo.*;
+
 import static config.Config.*;
 import java.sql.*;
 import java.util.ArrayList;
