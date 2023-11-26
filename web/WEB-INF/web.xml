@@ -88,6 +88,14 @@
         <servlet-name>AlterarDadosClienteServlet</servlet-name>
         <servlet-class>cliente.controle.AlterarDadosClienteServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RemoverProdutoCarrinhoServlet</servlet-name>
+        <servlet-class>carrinhocompras.controle.RemoverProdutoCarrinhoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdicionarProdutoCarrinhoServlet</servlet-name>
+        <servlet-class>carrinhocompras.controle.AdicionarProdutoCarrinhoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -179,6 +187,14 @@
     <servlet-mapping>
         <servlet-name>AlterarDadosClienteServlet</servlet-name>
         <url-pattern>/AlterarDadosCliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoverProdutoCarrinhoServlet</servlet-name>
+        <url-pattern>/RemoverProdutoCarrinho</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdicionarProdutoCarrinhoServlet</servlet-name>
+        <url-pattern>/AdicionarProdutoCarrinho</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

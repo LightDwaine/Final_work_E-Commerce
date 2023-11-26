@@ -128,5 +128,35 @@ public class ProdutoDAO {
         }
         return sucesso;
     }
+     
+     /**
+     * Método utilizado para recuperar um produto pelo id
+     * 
+     * @param id
+     * @return 
+     */
+    public Produto obter(int id) {
+        Produto produto = null;
+        try {
+            Class.forName(JDBC_DRIVER);
+            Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+            PreparedStatement ps = c.prepareStatement("SELECT id, descricao, preco, quantidade FROM produto WHERE id = ?");
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                produto = new Produto();
+                produto.setId(rs.getInt("id"));
+                produto.setDescricao(rs.getString("descricao"));
+                produto.setPreco(rs.getDouble("preco"));
+                produto.setQuantidade(rs.getInt("quantidade"));
+            }
+            rs.close();
+            ps.close();
+            c.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            return null;
+        }
+        return produto;
+    }
 
 }
