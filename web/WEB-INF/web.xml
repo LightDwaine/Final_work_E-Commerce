@@ -96,6 +96,10 @@
         <servlet-name>AdicionarProdutoCarrinhoServlet</servlet-name>
         <servlet-class>carrinhocompras.controle.AdicionarProdutoCarrinhoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VendaInserirServlet</servlet-name>
+        <servlet-class>venda.controle.VendaInserirServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -195,6 +199,10 @@
     <servlet-mapping>
         <servlet-name>AdicionarProdutoCarrinhoServlet</servlet-name>
         <url-pattern>/AdicionarProdutoCarrinho</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VendaInserirServlet</servlet-name>
+        <url-pattern>/VendaInserir</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
