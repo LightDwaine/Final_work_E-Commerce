@@ -10,14 +10,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Nova categoria</title>
+    
     </head>
     <body>
-        <h1>Nova categoria</h1>
-        <form action="InserirCategoria">
-            Nome: <input type="text" name="nome" />
-            <br/>
-            <input type="submit" value="Cadastrar" />
-        </form>
+        <h1 class="title">Nova categoria</h1>
+        <div class="new-c-form">
+            <form action="InserirCategoria" >
+                Nome: <input class="new-c-input" type="text" name="nome" />
+                <input type="submit" value="Cadastrar" />
+            </form>
+        </div>
+        <a href="ListarCategoria" class="a-btn"><div class="back-btn">Voltar</div></a>
     </body>
 </html>

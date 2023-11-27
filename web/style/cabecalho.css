@@ -112,6 +112,12 @@ form.user-area {
     margin: 0 15px;
 }
 
+/* footer */
+footer {
+    margin-top: 200px;
+    width: 100%;
+}
+
 /* Logado */
 .dropbtn {
   background-color: #279572;
@@ -223,7 +229,6 @@ div.manager-btn:last-child {
 /* Categorias e Produtos*/
 
 .custom-table {
-   
     border-collapse: collapse;
     width: 600px;
     margin: 50px auto;
@@ -234,25 +239,62 @@ div.manager-btn:last-child {
     padding: 8px; /* Adiciona espaçamento interno */
 }
 
-/* Remove a borda da última célula (última coluna) */
-.custom-table tr:first-child  .custom-table td:last-child{
-    width: 140px;
-}
-
 .custom-table td:last-child {
     width: 140px;
 }
 
-.first-row {
+.custom-table tr:first-child{
     background-color: #279572;
 }
 
-.last-col {
-    background-color: #def7eb;
+.main-prod .a-btn, .main-ctg .a-btn{
+    text-decoration: none;
 }
 
-.main-prod {
-   
-
+.new-p-btn, .new-c-btn {
+    background-color: #279572;
+    color: #000;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:  20px 50px;
+    margin: 30px 0;
 }
 
+.new-p-btn:hover, .new-c-btn:hover {
+    background-color:  #2da67f;
+}
+
+.back-btn {
+    background-color: #279572;
+    color: #000;
+    border-radius: 15px;
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    padding:  10px 30px;
+}
+
+/* Novo produto e Nova categoria */
+.new-c-form, .new-p-form {
+    margin-top: 50px;
+    display: flex;
+    height: 250px;
+    align-items: center;
+}
+
+.new-c-form form, .new-p-form form {
+    margin: 10px auto;
+    
+}
+
+.new-c-form .new-c-input {
+    width: 600px;
+}
+
+.new-p-form .new-p-input {
+    width: 600px;
+    margin: 5px 0;
+}

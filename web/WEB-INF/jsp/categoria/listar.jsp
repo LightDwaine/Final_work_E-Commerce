@@ -1,4 +1,4 @@
-<%-- 
+class="a-btn"<%-- 
     Document   : listar
     Created on : 27 de out de 2023, 15:26:57
     Author     : leoomoreira
@@ -33,10 +33,10 @@
                 } else {
             %>
             <table class="custom-table">
-                <tr class="first-row">
-                    <td>Id</td>
-                    <td>Nome</td>
-                    <td class="last-col">&nbsp;</td>
+                <tr>
+                    <td class="green-bg">Id</td>
+                    <td class="green-bg">Nome</td>
+                    <td>Ações</td>
                 </tr>
                 <% 
                     for (Categoria c : categorias) {
@@ -45,7 +45,7 @@
                     <td><%= c.getId() %></td>
                     <td><%= c.getNome() %></td>
                     <td>
-                        <a href="MostrarCategoria?id=<%= c.getId() %>">Mostrar</a>
+                        <a href="MostrarCategoria?id=<%= c.getId() %>">Editar</a>
                         <a href="ExcluirCategoria?id=<%= c.getId() %>">Excluir</a>
                     </td>
                 </tr>
@@ -56,7 +56,7 @@
             <%
                 }
             %>
-            <a href="NovaCategoria">Nova categoria</a>
+            <a href="ConfigurarAdmin" class="a-btn"><div class="back-btn">Voltar</div></a>
+            <a href="NovaCategoria" class="a-btn"><div class="new-c-btn">Nova categoria</div></a>
         </main>
-    </body>
-</html>
+<%@include file="/template/rodape.jsp" %>

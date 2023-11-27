@@ -34,8 +34,8 @@
             %>
             <table class="custom-table">
                 <tr>
-                    <td>Id</td>
-                    <td>Nome</td>
+                    <td class="green-bg">Id</td>
+                    <td class="green-bg">Nome</td>
                     <td>&nbsp;</td>
                 </tr>
                 <% 
@@ -45,20 +45,19 @@
                     <td><%= c.getId() %></td>
                     <td><%= c.getDescricao() %></td>
                     <td>
-                        <a href="MostrarProduto?id=<%= c.getId() %>">Mostrar</a>
+                        <a href="MostrarProduto?id=<%= c.getId() %>">Editar</a>
                         <a href="ExcluirProduto?id=<%= c.getId() %>">Excluir</a>
                     </td>
                 </tr>
                 <%
                     }
                 %>
-                <a href="NovoProduto">Novo produto</a>
             </table>
             <%
                 }
             %>
-            
-            <a href="ConfigurarAdmin">Voltar</a>
+            <a href="ConfigurarAdmin" class="a-btn"><div class="back-btn">Voltar</div></a>
+            <a href="NovoProduto" class="a-btn"><div class="new-p-btn">Nova produto</div></a>
         </main>
-    </body>
-</html>
+ <%@include file="/template/rodape.jsp" %>
+  

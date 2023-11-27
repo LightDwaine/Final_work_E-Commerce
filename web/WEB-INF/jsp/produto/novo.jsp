@@ -10,20 +10,22 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cadastrar produto</title>
     </head>
     <body>
-        <h1>Novo produto</h1>
-        <form action="InserirProduto">
-            Nome: <input type="text" name="descricao" />
-            <br/>
-            Preco: <input type="text" name="preco" />
-            <br/>
-            Foto: <input type="text" name="foto" />
-            <br/>
-            Quantidade: <input type="text" name="quantidade" />
-            <br/>
-            <input type="submit" value="Cadastrar" />
-        </form>
+        <h1 class="title">Novo produto</h1>
+        <div class="new-p-form">
+            <form action="InserirProduto">
+                Nome: <input class="new-p-input" type="text" name="descricao" />
+                <br/>
+                Preco: <input class="new-p-input" type="text" name="preco" />
+                <br/>
+                Foto: <input class="new-p-input" type="text" name="foto" />
+                <br/>
+                Quantidade: <input class="new-p-input" type="text" name="quantidade" />
+                <br/>
+                <input type="submit" value="Cadastrar" />
+            </form>
+        </div>
+        <a href="ListarProduto" class="a-btn"><div class="back-btn">Voltar</div></a>
     </body>
 </html>
