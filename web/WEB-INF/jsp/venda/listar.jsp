@@ -13,10 +13,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Minhas Vendas</title>
+        <title>Minhas comprar</title>
     </head>
     <body>
-        <h1 class="title">Minhas Vendas</h1>
+        <h1 class="title">Minhas compras</h1>
         <main class="main-ctg">
             <%
                 if (request.getAttribute("mensagem") != null) {
@@ -29,13 +29,13 @@
                 List<Venda> vendas = (List<Venda>) request.getAttribute("vendas");
                 if (vendas == null || vendas.isEmpty()) {
             %>
-            <div>Não há vendas a serem listadas.</div>
+            <div>Você ainda não comprou nada.</div>
             <%
                 } else {
             %>
             <table class="custom-table">
                 <tr class="first-row">
-                    <td>ID</td>
+                    <td>Código da compra:</td>
                     <td class="last-col">&nbsp;</td>
                 </tr>
                 <% 
@@ -44,8 +44,7 @@
                 <tr>
                     <td><%= c.getId() %></td>
                     <td>
-                        <a href="MostrarCategoria?id=<%= c.getId() %>">Mostrar</a>
-                        <a href="ExcluirCategoria?id=<%= c.getId() %>">Excluir</a>
+                        <a href="MostrarVenda?id=<%= c.getId() %>">Mostrar detalhes</a>
                     </td>
                 </tr>
                 <%
@@ -55,7 +54,6 @@
             <%
                 }
             %>
-            <a href="NovaCategoria">Nova categoria</a>
         </main>
     </body>
 </html>
