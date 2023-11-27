@@ -1,8 +1,6 @@
 package acesso.controle;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,21 +26,18 @@ public class InicioServlet extends HttpServlet {
         List<Produto> produtos = produtoDAO.listarProdutosEmEstoque();
         request.setAttribute("produtosEmEstoque", produtos);
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMyyyyhhmmss");
         Cookie cookie = null;
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {
             for (Cookie c : cookies) {
-                if (c.getName().equals("smdecommerce.time")) {
+                if (c.getName().equals("smdecommerce.carrinho")) {
                     cookie = c;
                     break;
                 }
             }
         }
         if (cookie == null) {
-            cookie = new Cookie("smdecommerce.time", dateFormat.format(new Date()));
-        } else {
-            cookie.setValue(dateFormat.format(new Date()));
+            cookie = new Cookie("smdecommerce.carrinho", "");
         }
         cookie.setMaxAge(Integer.MAX_VALUE);
         response.addCookie(cookie);
