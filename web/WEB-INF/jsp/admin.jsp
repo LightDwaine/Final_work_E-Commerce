@@ -22,6 +22,7 @@
         <main class="main-admin">
             <a href="ListarProduto"><div class="manager-btn"><span class="text-center-div">Cadastro de Produtos</span></div></a> 
             <a href="ListarCategoria"><div class="manager-btn"><span class="text-center-div">Cadastro de Categorias</span></div></a>
+            <a href="MostrarTodasVendas"><div class="manager-btn"><span class="text-center-div">Gerenciar Vendas</span></div></a>
         </main>
       
                  

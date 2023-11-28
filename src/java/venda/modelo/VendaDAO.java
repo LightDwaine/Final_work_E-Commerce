@@ -78,6 +78,26 @@ public class VendaDAO {
         return sucesso;
     }
     
+    public boolean excluir(int vendaId) {
+    try {
+        Class.forName(JDBC_DRIVER);
+        Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+        PreparedStatement ps = c.prepareStatement("DELETE FROM venda WHERE id = ?");
+        ps.setInt(1, vendaId);
+        
+        int linhasAfetadas = ps.executeUpdate();
+        
+        ps.close();
+        c.close();
+
+        // Verifica se houve linhas afetadas para determinar se a exclusão foi bem-sucedida
+        return linhasAfetadas > 0;
+    } catch (ClassNotFoundException | SQLException ex) {
+        ex.printStackTrace(); 
+        return false; 
+    }
+}
+
     
    public List<Venda> listar(int usuarioId) {
     List<Venda> vendas = new ArrayList<>();
@@ -109,6 +129,37 @@ public class VendaDAO {
 
     return vendas;
 }
+   
+   public List<Venda> listarTodasAsVendas() {
+    List<Venda> vendas = new ArrayList<>();
+
+    try {
+        Class.forName(JDBC_DRIVER);
+        Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+        PreparedStatement ps = c.prepareStatement("SELECT id, usuario_id FROM venda");
+        ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+            Venda venda = new Venda();
+            venda.setId(rs.getInt("id"));
+            venda.setUsuarioId(rs.getInt("usuario_id"));
+
+            
+
+            vendas.add(venda);
+        }
+
+        rs.close();
+        ps.close();
+        c.close();
+    } catch (ClassNotFoundException | SQLException ex) {
+        ex.printStackTrace(); // Melhorar o tratamento de exceção, isso é apenas um exemplo
+        return new ArrayList<>(); // Retorna uma lista vazia em caso de erro
+    }
+
+    return vendas;
+}
+
    
    public List<VendaProduto> listarProdutos(int id) {
         List<VendaProduto> vendaProdutos = new ArrayList<>();

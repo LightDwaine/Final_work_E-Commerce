@@ -108,6 +108,14 @@
         <servlet-name>MostrarVendaServlet</servlet-name>
         <servlet-class>venda.controle.MostrarVendaServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MostrarTodasVendasServlet</servlet-name>
+        <servlet-class>venda.controle.MostrarTodasVendasServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExcluirVendaServlet</servlet-name>
+        <servlet-class>venda.controle.ExcluirVendaServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -219,6 +227,14 @@
     <servlet-mapping>
         <servlet-name>MostrarVendaServlet</servlet-name>
         <url-pattern>/MostrarVenda</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MostrarTodasVendasServlet</servlet-name>
+        <url-pattern>/MostrarTodasVendas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExcluirVendaServlet</servlet-name>
+        <url-pattern>/ExcluirVenda</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
