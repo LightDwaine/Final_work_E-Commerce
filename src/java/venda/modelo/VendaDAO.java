@@ -82,16 +82,26 @@ public class VendaDAO {
     try {
         Class.forName(JDBC_DRIVER);
         Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
-        PreparedStatement ps = c.prepareStatement("DELETE FROM venda WHERE id = ?");
-        ps.setInt(1, vendaId);
         
-        int linhasAfetadas = ps.executeUpdate();
+        PreparedStatement ps1 = c.prepareStatement("DELETE FROM venda_produto WHERE venda_id IN (SELECT id FROM venda WHERE id = ?)");
+    ps1.setInt(1, vendaId); 
+    int rowsAffected1 = ps1.executeUpdate();
+    System.out.println("Linhas afetadas na tabela venda_produto: " + rowsAffected1);
+
+    
+    PreparedStatement ps2 = c.prepareStatement("DELETE FROM venda WHERE id = ?");
+    ps2.setInt(1, vendaId); 
+    int rowsAffected2 = ps2.executeUpdate();
+    System.out.println("Linhas afetadas na tabela venda: " + rowsAffected2);
+
+  
         
-        ps.close();
+        ps1.close();
+        ps2.close();
         c.close();
 
         // Verifica se houve linhas afetadas para determinar se a exclusão foi bem-sucedida
-        return linhasAfetadas > 0;
+        return rowsAffected1 > 0 || rowsAffected2 > 0;
     } catch (ClassNotFoundException | SQLException ex) {
         ex.printStackTrace(); 
         return false; 
