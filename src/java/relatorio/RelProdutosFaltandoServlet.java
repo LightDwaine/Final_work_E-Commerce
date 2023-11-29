@@ -23,7 +23,8 @@ public class RelProdutosFaltandoServlet extends HttpServlet {
             ProdutoDAO produtoDAO = new ProdutoDAO();
             List<Produto> produtos = produtoDAO.listarProdutosFaltando();
             for (Produto p : produtos) {
-                relatorio.print(p.getId() + "\t" + p.getDescricao() + "\t" + p.getPreco() + "\n");
+                relatorio.print("ID do produto: " + p.getId() + "\t"
+                        + "Nome: " + p.getDescricao() + "\t" + "Preço: " + p.getPreco() + "\n");
             }
             relatorio.flush();
         }

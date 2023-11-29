@@ -33,8 +33,8 @@ public class RelTotalVendasClienteServlet extends HttpServlet {
             List<VendaComUsuario> vendasPorCliente = vendaDAO.recuperarTotalComprasPorCliente();
 
             for (VendaComUsuario vendaComUsuario : vendasPorCliente) {
-                relatorio.print("Cliente ID: " + vendaComUsuario.getClienteId() +
-                                " - Nome do Cliente: " + vendaComUsuario.getNomeCliente() +
+                relatorio.print("ID do cliente: " + vendaComUsuario.getClienteId() +
+                                " - Nome: " + vendaComUsuario.getNomeCliente() +
                                 " - Quantidade de Compras: " + vendaComUsuario.getQuantidadeCompras() + "\n");
             }
             relatorio.flush();
