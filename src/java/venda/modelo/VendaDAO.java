@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -241,6 +242,42 @@ public class VendaDAO {
         }
 
         return vendasPorCliente;
+    }
+   
+    public List<ValorRecebidoPorDia> totalValorRecebidoPorDia(Date dataInicial, Date dataFinal) {
+        List<ValorRecebidoPorDia> valoresPorDia = new ArrayList<>();
+
+        try {
+            Class.forName(JDBC_DRIVER);
+            Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+            PreparedStatement ps = c.prepareStatement(
+                    "SELECT v.data, SUM(vp.quantidade * p.preco) AS total_por_dia " +
+                            "FROM venda v " +
+                            "JOIN venda_produto vp ON v.id = vp.venda_id " +
+                            "JOIN produto p ON vp.produto_id = p.id " +
+                            "WHERE v.data BETWEEN ? AND ? " +
+                            "GROUP BY v.data " +
+                            "ORDER BY v.data ASC");
+
+            ps.setDate(1, new java.sql.Date(dataInicial.getTime()));
+            ps.setDate(2, new java.sql.Date(dataFinal.getTime()));
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                ValorRecebidoPorDia valorPorDia = new ValorRecebidoPorDia();
+                valorPorDia.setData(rs.getDate("data"));
+                valorPorDia.setValorTotal(rs.getBigDecimal("total_por_dia"));
+                valoresPorDia.add(valorPorDia);
+            }
+
+            rs.close();
+            ps.close();
+            c.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            ex.printStackTrace(); // Tratar adequadamente as exceções em um ambiente de produção
+        }
+
+        return valoresPorDia;
     }
    
 }

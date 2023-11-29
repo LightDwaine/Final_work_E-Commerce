@@ -22,7 +22,7 @@
         <main class="main-admin">
             <a href="RelTotalVendasCliente"><div class="manager-btn"><span class="text-center-div">Total de Vendas por Cliente</span></div></a> 
             <a href="RelProdutosFaltando"><div class="manager-btn"><span class="text-center-div">Produtos em falta</span></div></a>
-            <a href=""><div class="manager-btn"><span class="text-center-div">Total do valor de vendas por dia</span></div></a>
+            <a href="RelTotalValorData"><div class="manager-btn"><span class="text-center-div">Total do valor de vendas por dia</span></div></a>
            
         </main>
       

@@ -128,6 +128,14 @@
         <servlet-name>RelTotalVendasClienteServlet</servlet-name>
         <servlet-class>relatorio.RelTotalVendasClienteServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RelTotalValorDiaServlet</servlet-name>
+        <servlet-class>relatorio.RelTotalValorDiaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RelTotalValorDataServlet</servlet-name>
+        <servlet-class>relatorio.RelTotalValorDataServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -259,6 +267,14 @@
     <servlet-mapping>
         <servlet-name>RelTotalVendasClienteServlet</servlet-name>
         <url-pattern>/RelTotalVendasCliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RelTotalValorDiaServlet</servlet-name>
+        <url-pattern>/RelTotalValorDia</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RelTotalValorDataServlet</servlet-name>
+        <url-pattern>/RelTotalValorData</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
