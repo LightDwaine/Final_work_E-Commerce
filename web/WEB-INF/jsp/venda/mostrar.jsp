@@ -34,14 +34,16 @@
             <table class="custom-table">
                 <tr class="first-row">
                     <td>Código do Produto:</td>
-                    <td>Quantidade:</td>
+                    <td>Descrição do Produto:</td>
+                    <td>Quantidade comprada:</td>
                 </tr>
                 <% 
                     for (VendaProduto c : vendaprodutos) {
                 %>
                 <tr>
-                    <td><%= c.getProdutoId() %></td>
                     
+                    <td><%= c.getProdutoId() %></td>
+                    <td><%= c.getDescricao() %></td>
                     <td><%= c.getQuantidade() %></td>
                 </tr>
                 <%

@@ -11,6 +11,15 @@ package venda.modelo;
 public class VendaProduto {
     private int produtoId;
     private int quantidade;
+    private String descricao;
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
    
     public int getProdutoId() {

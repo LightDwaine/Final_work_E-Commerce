@@ -172,32 +172,38 @@ public class VendaDAO {
 
    
    public List<VendaProduto> listarProdutos(int id) {
-        List<VendaProduto> vendaProdutos = new ArrayList<>();
+    List<VendaProduto> vendaProdutosComDescricao = new ArrayList<>();
 
-        try {
-            Class.forName(JDBC_DRIVER);
-            Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
-            PreparedStatement ps = c.prepareStatement("SELECT produto_id, quantidade FROM venda_produto WHERE venda_id = ?");
-            ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery();
+    try {
+        Class.forName(JDBC_DRIVER);
+        Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+        PreparedStatement ps = c.prepareStatement(
+                "SELECT vp.produto_id, vp.quantidade, p.descricao " +
+                        "FROM venda_produto vp " +
+                        "INNER JOIN produto p ON vp.produto_id = p.id " +
+                        "WHERE venda_id = ?");
+        ps.setInt(1, id);
+        ResultSet rs = ps.executeQuery();
 
-            while (rs.next()) {
-                VendaProduto vendaProduto = new VendaProduto();
-                vendaProduto.setProdutoId(rs.getInt("produto_id"));
-                vendaProduto.setQuantidade(rs.getInt("quantidade"));
-                vendaProdutos.add(vendaProduto);
-            }
+        while (rs.next()) {
+            VendaProduto vendaProdutoComDescricao = new VendaProduto();
+            vendaProdutoComDescricao.setProdutoId(rs.getInt("produto_id"));
+            vendaProdutoComDescricao.setQuantidade(rs.getInt("quantidade"));
+            vendaProdutoComDescricao.setDescricao(rs.getString("descricao"));
 
-            rs.close();
-            ps.close();
-            c.close();
-        } catch (ClassNotFoundException | SQLException ex) {
-            ex.printStackTrace(); // Tratar adequadamente as exceções em um ambiente de produção
-            return new ArrayList<>(); // Retorna uma lista vazia em caso de erro
+            vendaProdutosComDescricao.add(vendaProdutoComDescricao);
         }
 
-        return vendaProdutos;
+        rs.close();
+        ps.close();
+        c.close();
+    } catch (ClassNotFoundException | SQLException ex) {
+        ex.printStackTrace(); // Tratar adequadamente as exceções em um ambiente de produção
+        return new ArrayList<>(); // Retorna uma lista vazia em caso de erro
     }
+
+    return vendaProdutosComDescricao;
+   }
    
    
    public List<VendaComUsuario> recuperarTotalComprasPorCliente() {
