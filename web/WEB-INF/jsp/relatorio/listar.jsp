@@ -20,9 +20,9 @@
         </header>
          
         <main class="main-admin">
-            <a href="RelTotalVendasCliente"><div class="manager-btn"><span class="text-center-div">Total de Vendas por Cliente</span></div></a> 
-            <a href="RelProdutosFaltando"><div class="manager-btn"><span class="text-center-div">Produtos em falta</span></div></a>
-            <a href="RelTotalValorData"><div class="manager-btn"><span class="text-center-div">Total do valor de vendas por dia</span></div></a>
+            <a href="RelTotalVendasData"><div class="manager-btn"><span class="text-center-div">Total de Compras por Cliente</span></div></a> 
+            <a href="RelProdutosFaltando"><div class="manager-btn"><span class="text-center-div">Produtos em falta no estoque</span></div></a>
+            <a href="RelTotalValorData"><div class="manager-btn"><span class="text-center-div">Total do valor de Vendas por dia</span></div></a>
            
         </main>
       

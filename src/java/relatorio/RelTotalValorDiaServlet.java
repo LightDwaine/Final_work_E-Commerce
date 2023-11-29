@@ -18,29 +18,27 @@ public class RelTotalValorDiaServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        // Recupera os parâmetros do formulário
+       
         String dataInicialStr = request.getParameter("dataInicial");
         String dataFinalStr = request.getParameter("dataFinal");
 
-        // Verifica se os parâmetros não são nulos ou vazios
         if (dataInicialStr != null && dataFinalStr != null && !dataInicialStr.isEmpty() && !dataFinalStr.isEmpty()) {
             try {
-                // Converte as Strings de data para o formato Date
+                
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
                 Date dataInicial = format.parse(dataInicialStr);
                 Date dataFinal = format.parse(dataFinalStr);
 
-                // Chama a função do VendaDAO para obter o relatório
+                
                 VendaDAO vendaDAO = new VendaDAO();
                 List<ValorRecebidoPorDia> relatorio = vendaDAO.totalValorRecebidoPorDia(dataInicial, dataFinal);
 
-                // Processa o relatório (exemplo: escrever no response)
+                
                 response.setContentType("text/plain;charset=UTF-8");
                 response.setHeader("Content-Disposition", "attachment; filename=\"RelatorioValorPorDia.txt\"");
                 PrintWriter out = response.getWriter();
 
-                out.println("Relatório de Valor Recebido Por Dia:");
+                out.println("Valores Recebidos por dia:");
                 out.println("Data     \tValor Recebido");
 
                 for (ValorRecebidoPorDia valor : relatorio) {

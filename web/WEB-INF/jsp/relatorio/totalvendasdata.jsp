@@ -1,7 +1,7 @@
 <%@include file="/template/cabecalho_dados.jsp" %>
 <div class="form-cadastro">
     <h1>Escolha o período</h1>
-    <form action="RelTotalValorDia" method="post">
+    <form action="RelTotalVendasCliente" method="post">
         <div class="mb-3">
             <label for="inputDataInicial" class="form-label">Data inicial</label>
             <input type="date" name="dataInicial" class="form-control" id="inputDataInicial" required>

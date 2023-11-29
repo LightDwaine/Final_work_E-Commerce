@@ -207,42 +207,45 @@ public class VendaDAO {
    }
    
    
-   public List<VendaComUsuario> recuperarTotalComprasPorCliente() {
-        List<VendaComUsuario> vendasPorCliente = new ArrayList<>();
+   public List<VendaComUsuario> recuperarTotalComprasPorCliente(Date dataInicial, Date dataFinal) {
+    List<VendaComUsuario> vendasPorCliente = new ArrayList<>();
 
-        try {
-            Class.forName(JDBC_DRIVER);
+    try {
+        Class.forName(JDBC_DRIVER);
         Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
 
-            String query = "SELECT v.usuario_id AS cliente_id, COUNT(*) AS quantidade_compras, u.nome AS nome_cliente " +
-                           "FROM venda v " +
-                           "INNER JOIN usuario u ON v.usuario_id = u.id " +
-                           "GROUP BY v.usuario_id, u.nome " +
-                           "ORDER BY quantidade_compras DESC";
+        String query = "SELECT v.usuario_id AS cliente_id, COUNT(*) AS quantidade_compras, u.nome AS nome_cliente " +
+                       "FROM venda v " +
+                       "INNER JOIN usuario u ON v.usuario_id = u.id " +
+                       "WHERE v.data BETWEEN ? AND ? " +  
+                       "GROUP BY v.usuario_id, u.nome " +
+                       "ORDER BY quantidade_compras DESC";
 
-            PreparedStatement ps = c.prepareStatement(query);
+        PreparedStatement ps = c.prepareStatement(query);
+        ps.setDate(1, new java.sql.Date(dataInicial.getTime())); // Data inicial
+        ps.setDate(2, new java.sql.Date(dataFinal.getTime())); // Data final
 
-            ResultSet rs = ps.executeQuery();
+        ResultSet rs = ps.executeQuery();
 
-            while (rs.next()) {
-                VendaComUsuario vendaComUsuario = new VendaComUsuario();
-                vendaComUsuario.setClienteId(rs.getInt("cliente_id"));
-                vendaComUsuario.setQuantidadeCompras(rs.getInt("quantidade_compras"));
-                vendaComUsuario.setNomeCliente(rs.getString("nome_cliente"));
+        while (rs.next()) {
+            VendaComUsuario vendaComUsuario = new VendaComUsuario();
+            vendaComUsuario.setClienteId(rs.getInt("cliente_id"));
+            vendaComUsuario.setQuantidadeCompras(rs.getInt("quantidade_compras"));
+            vendaComUsuario.setNomeCliente(rs.getString("nome_cliente"));
 
-                vendasPorCliente.add(vendaComUsuario);
-            }
-
-            rs.close();
-            ps.close();
-            c.close();
-        } catch (ClassNotFoundException | SQLException ex) {
-            ex.printStackTrace(); // Tratamento de exceção básico
-            return new ArrayList<>(); // Retorna uma lista vazia em caso de erro
+            vendasPorCliente.add(vendaComUsuario);
         }
 
-        return vendasPorCliente;
+        rs.close();
+        ps.close();
+        c.close();
+    } catch (ClassNotFoundException | SQLException ex) {
+        ex.printStackTrace(); 
+        return new ArrayList<>(); 
     }
+
+    return vendasPorCliente;
+}
    
     public List<ValorRecebidoPorDia> totalValorRecebidoPorDia(Date dataInicial, Date dataFinal) {
         List<ValorRecebidoPorDia> valoresPorDia = new ArrayList<>();
