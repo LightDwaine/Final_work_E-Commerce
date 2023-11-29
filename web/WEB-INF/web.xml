@@ -116,6 +116,14 @@
         <servlet-name>ExcluirVendaServlet</servlet-name>
         <servlet-class>venda.controle.ExcluirVendaServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RelProdutosFaltandoServlet</servlet-name>
+        <servlet-class>relatorio.RelProdutosFaltandoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarRelatorioServlet</servlet-name>
+        <servlet-class>relatorio.ListarRelatorioServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -235,6 +243,14 @@
     <servlet-mapping>
         <servlet-name>ExcluirVendaServlet</servlet-name>
         <url-pattern>/ExcluirVenda</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RelProdutosFaltandoServlet</servlet-name>
+        <url-pattern>/RelProdutosFaltando</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarRelatorioServlet</servlet-name>
+        <url-pattern>/ListarRelatorio</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -158,5 +158,34 @@ public class ProdutoDAO {
         }
         return produto;
     }
+    
+    /**
+     * Método utilizado para listar todos os produtos que estão faltando
+     *
+     * @return
+     */
+    public List<Produto> listarProdutosFaltando() {
+        List<Produto> produtos = new ArrayList();
+        try {
+            Class.forName(JDBC_DRIVER);
+            Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+            PreparedStatement ps = c.prepareStatement("SELECT id, descricao, preco, quantidade FROM produto WHERE quantidade = 0 ORDER BY descricao ASC");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Produto p = new Produto();
+                p.setId(rs.getInt("id"));
+                p.setDescricao(rs.getString("descricao"));
+                p.setPreco(rs.getDouble("preco"));
+                p.setQuantidade(rs.getInt("quantidade"));
+                produtos.add(p);
+            }
+            rs.close();
+            ps.close();
+            c.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            return new ArrayList();
+        }
+        return produtos;
+    }
 
 }
