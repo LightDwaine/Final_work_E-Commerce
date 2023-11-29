@@ -198,6 +198,45 @@ public class VendaDAO {
 
         return vendaProdutos;
     }
+   
+   
+   public List<VendaComUsuario> recuperarTotalComprasPorCliente() {
+        List<VendaComUsuario> vendasPorCliente = new ArrayList<>();
+
+        try {
+            Class.forName(JDBC_DRIVER);
+        Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+
+            String query = "SELECT v.usuario_id AS cliente_id, COUNT(*) AS quantidade_compras, u.nome AS nome_cliente " +
+                           "FROM venda v " +
+                           "INNER JOIN usuario u ON v.usuario_id = u.id " +
+                           "GROUP BY v.usuario_id, u.nome " +
+                           "ORDER BY quantidade_compras DESC";
+
+            PreparedStatement ps = c.prepareStatement(query);
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                VendaComUsuario vendaComUsuario = new VendaComUsuario();
+                vendaComUsuario.setClienteId(rs.getInt("cliente_id"));
+                vendaComUsuario.setQuantidadeCompras(rs.getInt("quantidade_compras"));
+                vendaComUsuario.setNomeCliente(rs.getString("nome_cliente"));
+
+                vendasPorCliente.add(vendaComUsuario);
+            }
+
+            rs.close();
+            ps.close();
+            c.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            ex.printStackTrace(); // Tratamento de exceção básico
+            return new ArrayList<>(); // Retorna uma lista vazia em caso de erro
+        }
+
+        return vendasPorCliente;
+    }
+   
 }
    
 

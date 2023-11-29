@@ -124,6 +124,10 @@
         <servlet-name>ListarRelatorioServlet</servlet-name>
         <servlet-class>relatorio.ListarRelatorioServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RelTotalVendasClienteServlet</servlet-name>
+        <servlet-class>relatorio.RelTotalVendasClienteServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -251,6 +255,10 @@
     <servlet-mapping>
         <servlet-name>ListarRelatorioServlet</servlet-name>
         <url-pattern>/ListarRelatorio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RelTotalVendasClienteServlet</servlet-name>
+        <url-pattern>/RelTotalVendasCliente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
