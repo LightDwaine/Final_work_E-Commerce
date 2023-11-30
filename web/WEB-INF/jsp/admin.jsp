@@ -20,10 +20,10 @@
         </header>
          
         <main class="main-admin">
-            <a href="ListarProduto"><div class="manager-btn"><span class="text-center-div">Cadastro de Produtos</span></div></a> 
-            <a href="ListarCategoria"><div class="manager-btn"><span class="text-center-div">Cadastro de Categorias</span></div></a>
+            <a href="ListarProduto"><div class="manager-btn"><span class="text-center-div">Gerenciar Produtos</span></div></a> 
+            <a href="ListarCategoria"><div class="manager-btn"><span class="text-center-div">Gerenciar Categorias</span></div></a>
             <a href="MostrarTodasVendas"><div class="manager-btn"><span class="text-center-div">Gerenciar Vendas</span></div></a>
-            <a href="ListarRelatorio"><div class="manager-btn"><span class="text-center-div">Relatórios</span></div></a>
+            <a href="ListarRelatorio"><div class="manager-btn"><span class="text-center-div">Acessar Relatórios</span></div></a>
         </main>
       
                  

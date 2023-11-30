@@ -2,10 +2,14 @@ package relatorio;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,16 +28,29 @@ public class RelTotalValorDiaServlet extends HttpServlet {
 
         if (dataInicialStr != null && dataFinalStr != null && !dataInicialStr.isEmpty() && !dataFinalStr.isEmpty()) {
             try {
-                
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
                 Date dataInicial = format.parse(dataInicialStr);
                 Date dataFinal = format.parse(dataFinalStr);
 
-                
                 VendaDAO vendaDAO = new VendaDAO();
                 List<ValorRecebidoPorDia> relatorio = vendaDAO.totalValorRecebidoPorDia(dataInicial, dataFinal);
 
-                
+                Map<Date, BigDecimal> valoresPorData = new LinkedHashMap<>(); // LinkedHashMap mantém a ordem de inserção
+
+                // Agregar valores por data
+                for (ValorRecebidoPorDia valor : relatorio) {
+                    Date data = valor.getData();
+                    BigDecimal valorTotal = valor.getValorTotal();
+
+                    // Se já tivermos visto essa data, somamos o valor
+                    if (valoresPorData.containsKey(data)) {
+                        BigDecimal valorExistente = valoresPorData.get(data);
+                        valoresPorData.put(data, valorExistente.add(valorTotal));
+                    } else { // Caso contrário, adicionamos a nova data com o valor
+                        valoresPorData.put(data, valorTotal);
+                    }
+                }
+
                 response.setContentType("text/plain;charset=UTF-8");
                 response.setHeader("Content-Disposition", "attachment; filename=\"RelatorioValorPorDia.txt\"");
                 PrintWriter out = response.getWriter();
@@ -41,14 +58,18 @@ public class RelTotalValorDiaServlet extends HttpServlet {
                 out.println("Valores Recebidos por dia:");
                 out.println("Data     \tValor Recebido");
 
-                for (ValorRecebidoPorDia valor : relatorio) {
-                    out.println(valor.getData() + "\t" + valor.getValorTotal());
+                // Imprimir os valores agregados por data
+                for (Map.Entry<Date, BigDecimal> entry : valoresPorData.entrySet()) {
+                    Date data = entry.getKey();
+                    BigDecimal valorTotal = entry.getValue();
+
+                    out.println(data + "\t" + valorTotal);
                 }
 
                 out.close();
 
             } catch (ParseException e) {
-                e.printStackTrace(); // Tratar adequadamente o erro de parsing
+               
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Erro ao processar as datas.");
             }
         } else {
