@@ -54,7 +54,7 @@ public class ProdutoDAO {
         try {
             Class.forName(JDBC_DRIVER);
             Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
-            PreparedStatement ps = c.prepareStatement("SELECT id, descricao, preco, foto, quantidade FROM produto WHERE quantidade > 0");
+            PreparedStatement ps = c.prepareStatement("SELECT id, descricao, preco, foto, quantidade FROM produto WHERE quantidade >= 0");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Produto p = new Produto();

@@ -36,7 +36,11 @@
                 <tr>
                     <td class="green-bg">Id</td>
                     <td class="green-bg">Nome</td>
-                    <td>&nbsp;</td>
+                    
+                    <td class="green-bg">Preço</td>
+                    <td class="green-bg">Quantidade em estoque</td>
+                    <td >Editar produto</td>
+                    <td >Excluir produto</td>
                 </tr>
                 <% 
                     for (Produto c : produtos) {
@@ -44,8 +48,13 @@
                 <tr>
                     <td><%= c.getId() %></td>
                     <td><%= c.getDescricao() %></td>
+                   
+                    <td><%= c.getPreco() %></td>
+                      <td><%= c.getQuantidade() %></td>
                     <td>
                         <a href="MostrarProduto?id=<%= c.getId() %>">Editar</a>
+                        </td>
+                         <td>
                         <a href="ExcluirProduto?id=<%= c.getId() %>">Excluir</a>
                     </td>
                 </tr>
