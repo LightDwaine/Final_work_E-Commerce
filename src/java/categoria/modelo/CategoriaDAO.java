@@ -135,5 +135,27 @@ public class CategoriaDAO {
         }
         return p;
     }
+    
+    public List<Categoria> obterIdENomeCategorias() {
+        List<Categoria> categorias = new ArrayList<>();
+        try {
+            Class.forName(JDBC_DRIVER);
+            Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+            PreparedStatement ps = c.prepareStatement("SELECT id, nome FROM categoria");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Categoria categoria = new Categoria();
+                categoria.setId(rs.getInt("id"));
+                categoria.setNome(rs.getString("nome"));
+                categorias.add(categoria);
+            }
+            rs.close();
+            ps.close();
+            c.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            ex.printStackTrace(); // Trate os erros de acordo com a sua lógica de tratamento de exceções
+        }
+        return categorias;
+    }
 
 }
