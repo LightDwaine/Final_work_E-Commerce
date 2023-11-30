@@ -35,18 +35,18 @@ public class RelTotalValorDiaServlet extends HttpServlet {
                 VendaDAO vendaDAO = new VendaDAO();
                 List<ValorRecebidoPorDia> relatorio = vendaDAO.totalValorRecebidoPorDia(dataInicial, dataFinal);
 
-                Map<Date, BigDecimal> valoresPorData = new LinkedHashMap<>(); // LinkedHashMap mantém a ordem de inserção
+                Map<Date, BigDecimal> valoresPorData = new LinkedHashMap<>(); 
 
-                // Agregar valores por data
+                
                 for (ValorRecebidoPorDia valor : relatorio) {
                     Date data = valor.getData();
                     BigDecimal valorTotal = valor.getValorTotal();
 
-                    // Se já tivermos visto essa data, somamos o valor
+                    
                     if (valoresPorData.containsKey(data)) {
                         BigDecimal valorExistente = valoresPorData.get(data);
                         valoresPorData.put(data, valorExistente.add(valorTotal));
-                    } else { // Caso contrário, adicionamos a nova data com o valor
+                    } else { 
                         valoresPorData.put(data, valorTotal);
                     }
                 }
@@ -58,7 +58,7 @@ public class RelTotalValorDiaServlet extends HttpServlet {
                 out.println("Valores Recebidos por dia:");
                 out.println("Data     \tValor Recebido");
 
-                // Imprimir os valores agregados por data
+                
                 for (Map.Entry<Date, BigDecimal> entry : valoresPorData.entrySet()) {
                     Date data = entry.getKey();
                     BigDecimal valorTotal = entry.getValue();
