@@ -43,8 +43,8 @@
 %>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <%
-        for (int i = 0; i < produtos.size(); i++) {
-            Produto p = produtos.get(i);
+        for (Produto p : produtos) {
+            if (p.getQuantidade() > 0){
     %>
     <div class="col">
         <div class="card h-100">
@@ -59,11 +59,11 @@
         </div>
     </div>
     <%
-        }
+        }}
     %>
 </div>
 <%
-    }
+    } 
 %>
 <%
     Cookie cookie = null;
