@@ -36,14 +36,18 @@
             <table class="custom-table">
                 <tr class="first-row">
                     <td>Código da compra:</td>
-                    <td class="last-col">&nbsp;</td>
-                    <td class="last-col">&nbsp;</td>
+                    <td class="last-col">ID do usuário da compra:</td>
+                    <td class="last-col">Detalhes:</td>
+                    <td class="last-col">Excluir:</td>
                 </tr>
                 <% 
                     for (Venda c : vendas) {
                 %>
                 <tr>
                     <td><%= c.getId() %></td>
+                    <td>
+                        <%= c.getUsuarioId() %>
+                    </td>
                     <td>
                         <a href="MostrarVenda?id=<%= c.getId() %>">Mostrar detalhes dessa compra</a>
                     </td>
