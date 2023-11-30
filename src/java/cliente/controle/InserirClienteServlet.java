@@ -1,7 +1,7 @@
 package cliente.controle;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,22 +28,16 @@ public class InserirClienteServlet extends HttpServlet {
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         boolean sucesso = usuarioDAO.inserirCliente(nome, endereco, email, login, senha);
 
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            if (sucesso) {
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>smd e-commerce</title>");
-                out.println("</head>");
-                out.println("<body>");
-                out.println("<h1>" + ((sucesso) ? "Cliente cadastrado com sucesso!" : "Não foi possível cadastrar este cliente") + "</h1>");
-                out.println("</body>");
-                out.println("</html>");
-            } else {
-                response.sendRedirect("index.jsp");
-            }
+         if (sucesso) {
+            request.setAttribute("mensagem", "Você foi cadastrado com sucesso");
+            
+        } else {
+            request.setAttribute("mensagem", "Não foi possível realizar seu cadastro");
+        }
+       
+        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+        dispatcher.forward(request, response);
         }
     }
 
-}
+
