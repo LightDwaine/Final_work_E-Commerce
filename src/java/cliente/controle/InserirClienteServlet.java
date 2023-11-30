@@ -35,7 +35,7 @@ public class InserirClienteServlet extends HttpServlet {
             request.setAttribute("mensagem", "Não foi possível realizar seu cadastro");
         }
        
-        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Inicio");
         dispatcher.forward(request, response);
         }
     }
