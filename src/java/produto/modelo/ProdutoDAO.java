@@ -190,5 +190,32 @@ public class ProdutoDAO {
         }
         return produtos;
     }
+    
+     public Produto buscar(String descricao) {
+    Produto p = null;
+    try {
+        Class.forName(JDBC_DRIVER);
+        Connection c = DriverManager.getConnection(JDBC_URL, JDBC_USUARIO, JDBC_SENHA);
+        PreparedStatement ps = c.prepareStatement("SELECT * FROM produto WHERE descricao = ?");
+        ps.setString(1, descricao);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            p = new Produto();
+            p.setId(rs.getInt("id"));
+            p.setDescricao(rs.getString("descricao"));
+            p.setPreco(rs.getDouble("preco"));
+            p.setFoto(rs.getString("foto"));
+            p.setQuantidade(rs.getInt("quantidade"));
+            
+        }
+        rs.close();
+        ps.close();
+        c.close();
+    } catch (ClassNotFoundException | SQLException ex) {
+        System.out.println(ex);
+        return null;
+    }
+    return p;
+}
 
 }

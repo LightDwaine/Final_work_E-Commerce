@@ -22,10 +22,12 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                 <form class="search-bar">
-                    <input class="search " type="search" placeholder="Digimon.." aria-label="Search">
-                    <button class="search-btn" type="submit"><img src="img/lupa.png" class="search-img"></button>
-                </form>
+                 <form class="search-bar" action="BuscarProduto" method="GET">
+                 <input class="search" type="search" name="descricao" placeholder="Digite o nome do Digimon" aria-label="Search">
+                 <button  type="submit" class="search-btn">
+                     <a href="BuscarProduto" class="search-btn"><img src="img/lupa.png" class="search-img"></a></button>
+                 </form>
+
    
                 <%
                     Usuario usuario = (Usuario) session.getAttribute("usuario");

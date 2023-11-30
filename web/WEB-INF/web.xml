@@ -140,6 +140,10 @@
         <servlet-name>RelTotalVendasDataServlet</servlet-name>
         <servlet-class>relatorio.RelTotalVendasDataServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BuscarProdutoServlet</servlet-name>
+        <servlet-class>produto.controle.BuscarProdutoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -283,6 +287,10 @@
     <servlet-mapping>
         <servlet-name>RelTotalVendasDataServlet</servlet-name>
         <url-pattern>/RelTotalVendasData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BuscarProdutoServlet</servlet-name>
+        <url-pattern>/BuscarProduto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
