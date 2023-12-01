@@ -41,6 +41,7 @@
                     <td class="green-bg">Quantidade em estoque</td>
                     <td >Editar produto</td>
                     <td >Excluir produto</td>
+                    <td >Adicionar foto</td>
                 </tr>
                 <% 
                     for (Produto c : produtos) {
@@ -56,6 +57,9 @@
                         </td>
                          <td>
                         <a href="ExcluirProduto?id=<%= c.getId() %>">Excluir</a>
+                    </td>
+                     <td>
+                        <a href="UploadProdutoFotoForm?id=<%= c.getId() %>">Adicionar</a>
                     </td>
                 </tr>
                 <%

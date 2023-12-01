@@ -144,6 +144,18 @@
         <servlet-name>BuscarProdutoServlet</servlet-name>
         <servlet-class>produto.controle.BuscarProdutoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ExibirFotoProdutoServlet</servlet-name>
+        <servlet-class>produto.controle.ExibirFotoProdutoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadProdutoFotoFormServlet</servlet-name>
+        <servlet-class>produto.controle.UploadProdutoFotoFormServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadProdutoFotoServlet</servlet-name>
+        <servlet-class>produto.controle.UploadProdutoFotoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioServlet</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -291,6 +303,18 @@
     <servlet-mapping>
         <servlet-name>BuscarProdutoServlet</servlet-name>
         <url-pattern>/BuscarProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExibirFotoProdutoServlet</servlet-name>
+        <url-pattern>/ExibirFotoProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadProdutoFotoFormServlet</servlet-name>
+        <url-pattern>/UploadProdutoFotoForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadProdutoFotoServlet</servlet-name>
+        <url-pattern>/UploadProdutoFoto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

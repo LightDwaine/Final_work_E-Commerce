@@ -48,7 +48,7 @@
     %>
     <div class="col">
         <div class="card h-100">
-            <img src="ExibirProdutoFoto?id=<%= p.getId()%>" class="card-img-top" alt="...">
+            <img src="ExibirFotoProduto?id=<%= p.getId()%>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><%= p.getDescricao()%></h5>
                 <p class="card-text"><%= p.getDescricao()%></p>

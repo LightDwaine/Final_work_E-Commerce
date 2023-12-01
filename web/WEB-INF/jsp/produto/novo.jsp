@@ -21,8 +21,6 @@
         <br/>
         Preço: <input class="new-p-input" type="text" name="preco" />
         <br/>
-        Foto: <input class="new-p-input" type="text" name="foto" />
-        <br/>
         Quantidade: <input class="new-p-input" type="text" name="quantidade" />
         <br/>
         Categoria:
