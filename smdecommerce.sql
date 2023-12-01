@@ -236,9 +236,12 @@ ALTER TABLE ONLY public.venda ALTER COLUMN id SET DEFAULT nextval('public.venda_
 -- Data for Name: categoria; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.categoria VALUES (2, 'FOGO');
-INSERT INTO public.categoria VALUES (1, 'ALADO');
-
+INSERT INTO public.categoria VALUES (1, 'Rookie');
+INSERT INTO public.categoria VALUES (2, 'Champion');
+INSERT INTO public.categoria VALUES (3, 'Mega');
+INSERT INTO public.categoria VALUES (4, 'Ultimate');
+INSERT INTO public.categoria VALUES (5, 'Free');
+INSERT INTO public.categoria VALUES (6, 'Hybrid');
 
 --
 -- TOC entry 3008 (class 0 OID 90486)

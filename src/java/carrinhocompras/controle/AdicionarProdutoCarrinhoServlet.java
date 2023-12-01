@@ -35,6 +35,7 @@ public class AdicionarProdutoCarrinhoServlet extends HttpServlet {
         cookie.setValue(novoCookieString);
         cookie.setMaxAge(Integer.MAX_VALUE);
         response.addCookie(cookie);
+         request.setAttribute("mensagem", "Produto adicionado no carrinho");
         RequestDispatcher dispatcher = request.getRequestDispatcher("/Inicio");
         dispatcher.forward(request, response);
     }

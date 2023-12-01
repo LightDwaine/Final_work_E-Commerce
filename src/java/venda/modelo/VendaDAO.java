@@ -154,7 +154,7 @@ public class VendaDAO {
             Venda venda = new Venda();
             venda.setId(rs.getInt("id"));
             venda.setUsuarioId(rs.getInt("usuario_id"));
-
+            
             
 
             vendas.add(venda);
@@ -199,8 +199,8 @@ public class VendaDAO {
         ps.close();
         c.close();
     } catch (ClassNotFoundException | SQLException ex) {
-        ex.printStackTrace(); // Tratar adequadamente as exceções em um ambiente de produção
-        return new ArrayList<>(); // Retorna uma lista vazia em caso de erro
+        ex.printStackTrace(); 
+        return new ArrayList<>(); 
     }
 
     return vendaProdutosComDescricao;
@@ -222,8 +222,8 @@ public class VendaDAO {
                        "ORDER BY quantidade_compras DESC";
 
         PreparedStatement ps = c.prepareStatement(query);
-        ps.setDate(1, new java.sql.Date(dataInicial.getTime())); // Data inicial
-        ps.setDate(2, new java.sql.Date(dataFinal.getTime())); // Data final
+        ps.setDate(1, new java.sql.Date(dataInicial.getTime())); 
+        ps.setDate(2, new java.sql.Date(dataFinal.getTime())); 
 
         ResultSet rs = ps.executeQuery();
 
@@ -277,7 +277,7 @@ public class VendaDAO {
             ps.close();
             c.close();
         } catch (ClassNotFoundException | SQLException ex) {
-            ex.printStackTrace(); // Tratar adequadamente as exceções em um ambiente de produção
+            ex.printStackTrace(); 
         }
 
         return valoresPorDia;
