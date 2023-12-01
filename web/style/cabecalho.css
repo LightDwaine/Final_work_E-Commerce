@@ -160,6 +160,26 @@ footer {
   background-color: #2da67f;
 }
 
+/* Index */
+
+#carouselExampleIndicators {
+    margin-top: 20px;
+}
+
+.carousel-inner {
+    border-radius: 15px;
+}
+
+
+.title-produto {
+    width: 100%;
+    border: 2px solid #279572;
+    border-radius: 12px;
+    margin: 30px 0;
+    padding: 5px 45%;
+    background-color: #a1d1ba;
+    color: #10523d;
+}
 
 
 /* Cadastro */
@@ -271,8 +291,9 @@ div.manager-btn:last-child {
     color: #000;
     border-radius: 15px;
     position: absolute;
-    top: 12%;
+    top: 0;
     left: 5%;
+    margin-top: 150px;
     transform: translate(-50%, -50%);
     padding:  10px 30px;
 }

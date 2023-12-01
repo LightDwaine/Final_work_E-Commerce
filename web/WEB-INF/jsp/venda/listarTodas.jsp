@@ -62,6 +62,7 @@
             <%
                 }
             %>
+            <a href="Inicio" class="a-btn"><div class="back-btn">Voltar</div></a>
         </main>
     </body>
 </html>

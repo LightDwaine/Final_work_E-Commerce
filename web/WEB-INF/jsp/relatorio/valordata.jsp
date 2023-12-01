@@ -14,5 +14,6 @@
         </div>
         <button type="submit" class="btn btn-dark">Buscar</button>
     </form>
+    <a href="ListarRelatorio" class="a-btn"><div class="back-btn">Voltar</div></a>
 </div>
 <%@include file="/template/rodape.jsp" %>

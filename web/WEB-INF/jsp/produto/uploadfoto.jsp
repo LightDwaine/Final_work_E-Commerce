@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="/template/cabecalho_dados.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,6 +22,7 @@
             Foto: <input type="file" name="foto" accept="image/png" /><br/>
             <input type="submit" value="Enviar" />
         </form>
+        <a href="ListarProduto" class="a-btn"><div class="back-btn">Voltar</div></a>
     </body>
 </html>
 

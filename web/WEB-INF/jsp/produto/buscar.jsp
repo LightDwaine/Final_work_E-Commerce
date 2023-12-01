@@ -17,12 +17,11 @@
    if (produto != null) {
 %>
 <div class="card">
-    <img src="<%= produto.getFoto() %>" class="card-img-top" alt="...">
+    <img src="ExibirFotoProduto?id=<%=produto.getId()%>" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title"><%= produto.getDescricao()%></h5>
-        <p class="card-text">Preço: <%= produto.getPreco() %></p>
-        <p class="card-text">Quantidade: <%= produto.getQuantidade() %></p>
-        <!-- Adicione outras informações do produto conforme necessário -->
+        <p class="card-text">Preço: R$<%= produto.getPreco() %></p>
+        <p class="card-text">Estoque: <%= produto.getQuantidade() %></p>
     </div>
     <div class="card-footer">
         <small class="text-muted"><a href="AdicionarProdutoCarrinho?produtoId=<%= produto.getId()%>" class="btn btn-primary">Comprar</a></small>
